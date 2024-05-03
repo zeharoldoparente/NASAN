@@ -1,0 +1,96 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: "Roboto", sans-serif;
+}
+.full-body {
+   background-color: rgb(238, 238, 238);
+   max-width: 960px;
+   width: 100%;
+   margin: 0 auto;
+}
+.tittle-ped {
+   padding-top: 25px;
+}
+.info-emp {
+   padding: 20px;
+   text-align: center;
+}
+.info-emp h4 {
+   font-size: 18px;
+}
+
+.info-emp p {
+   font-size: 13px;
+}
+.dads {
+   margin: 15px;
+}
+label {
+   display: inline-block;
+   margin-left: 3px;
+}
+input {
+   padding: 6px;
+   margin: 5px 5px;
+   border: 1px solid #ccc;
+   border-radius: 4px;
+}
+.center {
+   justify-content: center;
+   align-items: center;
+   display: flex;
+}
+#empresa {
+   width: 45%;
+}
+#cnpj,
+#ie {
+   width: 16%;
+}
+#loc {
+   width: 35%;
+}
+#cidade {
+   width: 15%;
+}
+#estado {
+   width: 5%;
+}
+#cep {
+   width: 14%;
+}
+
+#representante {
+   width: 30%;
+}
+
+#regiao {
+   width: 30%;
+}
+
+.div-button {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.button {
+   margin: 0 auto;
+   margin-top: 30px;
+   margin-bottom: 30px;
+   padding: 12px 50px;
+   font-size: 12px;
+   font-weight: bold;
+   text-align: center;
+   cursor: pointer;
+}
+.button--visualizacao {
+   background-color: red;
+   color: white;
+}
+.button--finalizacao {
+   background-color: green;
+   color: white;
+}
