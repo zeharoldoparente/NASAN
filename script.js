@@ -28,3 +28,38 @@ function scrollToTop() {
       window.scrollTo(0, c - c / 8);
    }
 }
+// Função para calcular o valor total com base na quantidade inserida e no valor unitário do produto
+function calcularValorTotal() {
+   const produtos = document.querySelectorAll("tbody tr");
+   produtos.forEach(function (produto) {
+      const qtd = parseInt(produto.querySelector(".qtd-pedido").value);
+      const valorUnitario = parseFloat(
+         produto.querySelector(".valor-unitario").textContent.replace("R$ ", "")
+      );
+      const valorTotal = qtd * valorUnitario;
+      produto.querySelector(
+         ".valor-total"
+      ).textContent = `R$ ${valorTotal.toFixed(2)}`;
+   });
+}
+
+// Adicionar evento de escuta para detectar mudanças nos campos de quantidade
+const qtdPedidoInputs = document.querySelectorAll(".qtd-pedido");
+qtdPedidoInputs.forEach(function (qtdPedidoInput) {
+   qtdPedidoInput.addEventListener("input", function () {
+      calcularValorTotal();
+      atualizarTotalPedido();
+   });
+});
+
+// Função para calcular e atualizar o campo de total do pedido
+function atualizarTotalPedido() {
+   const produtos = document.querySelectorAll(".valor-total");
+   let totalPedido = 0;
+   produtos.forEach(function (produto) {
+      totalPedido += parseFloat(produto.textContent.replace("R$ ", ""));
+   });
+   document.querySelector(
+      ".total-pedido"
+   ).textContent = `R$ ${totalPedido.toFixed(2)}`;
+}
