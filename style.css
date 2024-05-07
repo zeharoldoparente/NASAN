@@ -16,16 +16,11 @@
 .info-emp {
    padding: 20px;
    text-align: center;
-}
-.info-emp h4 {
-   font-size: 18px;
-}
-
-.info-emp p {
-   font-size: 13px;
+   font-size: 25px;
 }
 .dads {
    margin: 15px;
+   padding-top: 25px;
 }
 label {
    display: inline-block;
@@ -150,4 +145,26 @@ th {
 tfoot td {
    padding-top: 12px;
    padding-bottom: 12px;
+}
+
+/* Estilos para o botão de rolagem suave */
+#scrollTopButton {
+   position: fixed;
+   bottom: 20px;
+   right: 20px;
+   background-color: #007bff;
+   color: white;
+   border: none;
+   border-radius: 50%;
+   width: 50px;
+   height: 50px;
+   font-size: 24px;
+   line-height: 50px;
+   text-align: center;
+   cursor: pointer;
+   z-index: 9999;
+}
+
+#scrollTopButton:hover {
+   background-color: #0056b3;
 }
