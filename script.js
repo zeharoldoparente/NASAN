@@ -82,3 +82,20 @@ const btnVisualizacaoPedido = document.querySelector(".button--visualizacao");
 btnVisualizacaoPedido.addEventListener("click", function () {
    visualizarPedido();
 });
+
+function searchProdutos() {
+   const searchTerm = document
+      .getElementById("search")
+      .value.trim()
+      .toLowerCase();
+   const produtos = document.querySelectorAll("tbody tr");
+   produtos.forEach(function (produto) {
+      const codigo = produto.cells[0].textContent.trim().toLowerCase();
+      const nome = produto.cells[1].textContent.trim().toLowerCase();
+      if (codigo.includes(searchTerm) || nome.includes(searchTerm)) {
+         produto.style.display = "table-row"; // Mostra o produto
+      } else {
+         produto.style.display = "none"; // Oculta o produto
+      }
+   });
+}

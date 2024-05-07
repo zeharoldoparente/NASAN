@@ -151,3 +151,18 @@ tfoot {
 #scrollTopButton:hover {
    background-color: #0056b3;
 }
+
+.div-search {
+   align-items: center;
+   justify-self: center;
+   display: flex;
+   width: 300px;
+}
+
+.div-search label {
+   margin-right: 20px;
+   margin-bottom: 50px;
+}
+.div-search input {
+   margin-bottom: 50px;
+}
