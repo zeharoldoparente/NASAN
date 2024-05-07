@@ -63,3 +63,22 @@ function atualizarTotalPedido() {
       ".total-pedido"
    ).textContent = `R$ ${totalPedido.toFixed(2)}`;
 }
+
+// Função para filtrar e mostrar apenas os produtos com quantidade maior que zero
+function visualizarPedido() {
+   const produtos = document.querySelectorAll("tbody tr");
+   produtos.forEach(function (produto) {
+      const qtd = parseInt(produto.querySelector(".qtd-pedido").value);
+      if (qtd > 0) {
+         produto.style.display = "table-row"; // Mostra o produto
+      } else {
+         produto.style.display = "none"; // Oculta o produto
+      }
+   });
+}
+
+// Adicionar evento de escuta para o botão de visualização de pedido
+const btnVisualizacaoPedido = document.querySelector(".button--visualizacao");
+btnVisualizacaoPedido.addEventListener("click", function () {
+   visualizarPedido();
+});
