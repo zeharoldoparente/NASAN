@@ -94,6 +94,42 @@ input {
    background-color: green;
    color: white;
 }
+
+@media only screen and (max-width: 600px) {
+   .info-emp {
+      padding: 10px;
+   }
+
+   .info-emp h4 {
+      font-size: 16px;
+   }
+
+   .info-emp p {
+      font-size: 11px;
+   }
+
+   #empresa {
+      width: 100%;
+   }
+
+   #cnpj,
+   #ie,
+   #cidade,
+   #estado,
+   #cep {
+      width: 100%;
+   }
+
+   #loc {
+      width: 100%;
+   }
+
+   #representante,
+   #regiao {
+      width: 100%;
+   }
+}
+
 table {
    width: 100%;
    border-collapse: collapse;
