@@ -97,7 +97,9 @@ input {
       ); /* Garante que os inputs ocupem toda a largura do contêiner pai, considerando o padding */
    }
 }
+
 table {
+   font-size: 12px;
    width: 100%;
    border-collapse: collapse;
    margin-bottom: 10px;
@@ -113,19 +115,19 @@ td {
 th {
    background-color: #f2f2f2;
 }
+
 tfoot {
    font-size: 18px; /* Ajusta o tamanho da fonte */
-   font-weight: bold; /* Define negrito para destacar */
-   color: white; /* Cor do texto */
-   background-color: #333; /* Cor de fundo para destacar */
+   font-weight: bold;
    text-align: center; /* Centraliza o conteúdo */
    padding: 10px; /* Adiciona um espaçamento interno */
 }
 
-tfoot td {
-   padding-top: 50px;
-   padding-bottom: 2px;
-   font-weight: bolder;
+.valor-total {
+   max-width: 100px; /* Ajuste conforme necessário */
+   overflow: hidden;
+   text-overflow: ellipsis; /* Adiciona reticências (...) para indicar que o texto foi cortado */
+   white-space: nowrap; /* Impede que o texto seja quebrado em várias linhas */
 }
 
 /* Estilos para o botão de rolagem suave */
