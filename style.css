@@ -1,130 +1,102 @@
+/* Estilos gerais */
 * {
    margin: 0;
    padding: 0;
    box-sizing: border-box;
    font-family: "Roboto", sans-serif;
 }
+
+/* Corpo da página */
 .full-body {
    background-color: rgb(238, 238, 238);
-   max-width: 960px;
-   width: 100%;
-   margin: 0 auto;
+   max-width: 960px; /* Largura máxima da página */
+   width: 100%; /* Garante que a página ocupe toda a largura do viewport */
+   margin: 0 auto; /* Centraliza a página na tela */
+   overflow-x: hidden;
 }
+
+/* Título da tabela de pedidos */
 .tittle-ped {
    padding-top: 25px;
 }
+
+/* Informações da empresa */
 .info-emp {
    padding: 20px;
    text-align: center;
    font-size: 25px;
 }
+
+/* Espaçamento entre os elementos do formulário */
 .dads {
    margin: 15px;
    padding-top: 25px;
 }
+
+/* Estilos para os labels e inputs */
 label {
    display: inline-block;
    margin-left: 3px;
 }
+
 input {
    padding: 6px;
-   margin: 5px 5px;
+   margin: 5px 0; /* Adiciona margem superior e inferior para os inputs */
+   width: 100%; /* Garante que os inputs ocupem toda a largura do contêiner pai */
    border: 1px solid #ccc;
    border-radius: 4px;
 }
+
+/* Estilos para os botões */
 .center {
    justify-content: center;
    align-items: center;
    display: flex;
-}
-#empresa {
-   width: 45%;
-}
-#cnpj,
-#ie {
-   width: 16%;
-}
-#loc {
-   width: 35%;
-}
-#cidade {
-   width: 15%;
-}
-#estado {
-   width: 5%;
-}
-#cep {
-   width: 14%;
-}
-
-#representante {
-   width: 30%;
-}
-
-#regiao {
-   width: 30%;
-}
-
-.div-button {
-   display: flex;
-   justify-content: center;
-   align-items: center;
 }
 
 .button {
    margin: 0 auto;
    margin-top: 30px;
    margin-bottom: 30px;
+   margin-left: 5px;
    padding: 12px 50px;
    font-size: 12px;
    font-weight: bold;
    text-align: center;
    cursor: pointer;
 }
+
 .button--visualizacao {
    background-color: red;
    color: white;
 }
+
 .button--finalizacao {
    background-color: green;
    color: white;
 }
 
+/* Media query para dispositivos pequenos (até 600px de largura) */
 @media only screen and (max-width: 600px) {
+   /* Ajustes para o corpo da página */
+   .full-body {
+      max-width: 100%; /* Largura máxima da página */
+      width: 100%; /* Garante que a página ocupe toda a largura do viewport */
+      margin: 0 auto; /* Centraliza a página na tela */
+   }
+
+   /* Ajustes para as informações da empresa */
    .info-emp {
-      padding: 10px;
+      padding: 10px; /* Reduz o padding */
    }
 
-   .info-emp h4 {
-      font-size: 16px;
-   }
-
-   .info-emp p {
-      font-size: 11px;
-   }
-
-   #empresa {
-      width: 100%;
-   }
-
-   #cnpj,
-   #ie,
-   #cidade,
-   #estado,
-   #cep {
-      width: 100%;
-   }
-
-   #loc {
-      width: 100%;
-   }
-
-   #representante,
-   #regiao {
-      width: 100%;
+   /* Ajustes para os inputs */
+   input {
+      width: calc(
+         100% - 12px
+      ); /* Garante que os inputs ocupem toda a largura do contêiner pai, considerando o padding */
    }
 }
-
 table {
    width: 100%;
    border-collapse: collapse;
@@ -143,14 +115,15 @@ th {
 }
 
 tfoot td {
-   padding-top: 12px;
-   padding-bottom: 12px;
+   padding-top: 50px;
+   padding-bottom: 2px;
+   font-weight: bolder;
 }
 
 /* Estilos para o botão de rolagem suave */
 #scrollTopButton {
    position: fixed;
-   bottom: 20px;
+   bottom: 40px;
    right: 20px;
    background-color: #007bff;
    color: white;
