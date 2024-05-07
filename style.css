@@ -113,6 +113,14 @@ td {
 th {
    background-color: #f2f2f2;
 }
+tfoot {
+   font-size: 18px; /* Ajusta o tamanho da fonte */
+   font-weight: bold; /* Define negrito para destacar */
+   color: white; /* Cor do texto */
+   background-color: #333; /* Cor de fundo para destacar */
+   text-align: center; /* Centraliza o conteúdo */
+   padding: 10px; /* Adiciona um espaçamento interno */
+}
 
 tfoot td {
    padding-top: 50px;
