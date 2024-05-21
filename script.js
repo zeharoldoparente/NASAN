@@ -83,6 +83,7 @@ btnVisualizacaoPedido.addEventListener("click", function () {
    visualizarPedido();
 });
 
+// Função para filtrar os produtos por código ou nome
 function searchProdutos() {
    const searchTerm = document
       .getElementById("search")
@@ -99,3 +100,98 @@ function searchProdutos() {
       }
    });
 }
+
+// Função para gerar o PDF
+function gerarPDF() {
+   // Calcular valores totais antes de gerar o PDF
+   calcularValorTotal();
+   atualizarTotalPedido();
+   visualizarPedido();
+
+   // Coletar dados do formulário
+   const clienteForm = document.getElementById("clienteForm");
+   const vendedorForm = document.getElementById("vendedorForm");
+
+   // Verificar se os formulários existem antes de acessar seus elementos
+   if (!clienteForm || !vendedorForm) {
+      console.error("Formulários não encontrados.");
+      return;
+   }
+
+   const clienteData = Array.from(clienteForm.elements).reduce((acc, input) => {
+      if (input.name) acc[input.name] = input.value;
+      return acc;
+   }, {});
+
+   const vendedorData = Array.from(vendedorForm.elements).reduce(
+      (acc, input) => {
+         if (input.name) acc[input.name] = input.value;
+         return acc;
+      },
+      {}
+   );
+
+   // Coletar dados da tabela de produtos
+   const produtos = [];
+   document.querySelectorAll("tbody tr").forEach((tr) => {
+      const codigo = tr.cells[0].textContent;
+      const nome = tr.cells[1].textContent;
+      const valorUnitario = tr.cells[2].textContent;
+      const qtd = tr.querySelector(".qtd-pedido").value;
+      const valorTotal = tr.cells[4].textContent;
+
+      if (qtd > 0) {
+         // Incluir apenas produtos com quantidade maior que zero
+         produtos.push([codigo, nome, valorUnitario, qtd, valorTotal]);
+      }
+   });
+
+   const docDefinition = {
+      content: [
+         { text: "Detalhes do Pedido", style: "header" },
+         { text: "Dados do Cliente", style: "subheader" },
+         ...Object.entries(clienteData).map(
+            ([key, value]) => `${key}: ${value}`
+         ),
+         { text: "Dados do Vendedor", style: "subheader" },
+         ...Object.entries(vendedorData).map(
+            ([key, value]) => `${key}: ${value}`
+         ),
+         { text: "Produtos", style: "subheader" },
+         {
+            table: {
+               headerRows: 1,
+               widths: ["auto", "*", "auto", "auto", "auto"],
+               body: [
+                  [
+                     "Código",
+                     "Nome",
+                     "Valor Unitário",
+                     "Quantidade",
+                     "Valor Total",
+                  ],
+                  ...produtos,
+               ],
+            },
+         },
+      ],
+      styles: {
+         header: {
+            fontSize: 18,
+            bold: true,
+            margin: [0, 0, 0, 10],
+         },
+         subheader: {
+            fontSize: 14,
+            bold: true,
+            margin: [0, 10, 0, 5],
+         },
+      },
+   };
+
+   pdfMake.createPdf(docDefinition).download("pedido.pdf");
+}
+
+// Adicionar evento de escuta para o botão de gerar PDF
+const btnGerarPedido = document.getElementById("btnGerarPedido");
+btnGerarPedido.addEventListener("click", gerarPDF);
