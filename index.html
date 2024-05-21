@@ -25,7 +25,7 @@
                <h1 class="tittle-ped">Tabela de Pedidos</h1>
             </div>
             <div>
-               <form action="">
+               <form id="clienteForm">
                   <h3 class="dads">Dados Cliente</h3>
                   <label for="empresa">Razão social: </label>
                   <input type="text" id="empresa" name="empresa" />
@@ -42,7 +42,7 @@
                   <label for="cep">CEP: </label>
                   <input type="text" id="cep" name="cep" />
                </form>
-               <form action="">
+               <form id="vendedorForm">
                   <h3 class="dads">Dados Vendedor</h3>
                   <div class="center">
                      <label for="representante">Representante: </label>
@@ -53,22 +53,30 @@
                      />
                      <label for="regiao">Região: </label>
                      <input type="text" id="regiao" name="regiao" />
-                  </form>
-               </div>
+                  </div>
+               </form>
             </div>
          </header>
          <div class="div-button">
-            <button class="button button--visualizacao">Visualizar Pedido</button>
-            <button id="btnGerarPedido" class="button button--finalizacao">Gerar Pedido</button>
+            <button class="button button--visualizacao">
+               Visualizar Pedido
+            </button>
+            <button id="btnGerarPedido" class="button button--finalizacao">
+               Gerar Pedido
+            </button>
          </div>
          <section>
             <div>
                <h2>Produtos</h2>
                <div class="div-search">
                   <label for="search">Pesquisar:</label>
-                  <input type="text" id="search" name="search" oninput="searchProdutos()" />
-              </div>
-              
+                  <input
+                     type="text"
+                     id="search"
+                     name="search"
+                     oninput="searchProdutos()"
+                  />
+               </div>
                <table>
                   <thead>
                      <tr>
@@ -84,1417 +92,3037 @@
                         <td>6058</td>
                         <td>BAUTECH 1</td>
                         <td class="valor-unitario">R$ 14,65</td>
-                        <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
                         <td class="valor-total">R$ -</td>
-                    </tr>
-                    <tr>
+                     </tr>
+                     <tr>
                         <td>6451</td>
                         <td>BAUTECH 1</td>
                         <td class="valor-unitario">R$ 34,37</td>
-                        <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
                         <td class="valor-total">R$ -</td>
-                    </tr>
-                    <tr>
+                     </tr>
+                     <tr>
                         <td>6057</td>
                         <td>BAUTECH 1</td>
                         <td class="valor-unitario">R$ 420,40</td>
-                        <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
                         <td class="valor-total">R$ -</td>
-                    </tr>
-                    <tr>
+                     </tr>
+                     <tr>
                         <td>17565</td>
                         <td>BAUTECH 1.000 (TOP)</td>
                         <td class="valor-unitario">R$ 43,55</td>
-                        <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
                         <td class="valor-total">R$ -</td>
-                    </tr>
-                    <tr>
+                     </tr>
+                     <tr>
                         <td>19718</td>
                         <td>BAUTECH 5.000</td>
                         <td class="valor-unitario">R$ 80,27</td>
-                        <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
                         <td class="valor-total">R$ -</td>
-                    </tr>
-                    <tr>
+                     </tr>
+                     <tr>
                         <td>19669</td>
                         <td>BAUTECH 7.000 FIBRAS</td>
                         <td class="valor-unitario">R$ 86,10</td>
-                        <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
                         <td class="valor-total">R$ -</td>
-                    </tr>
-                    <tr>
+                     </tr>
+                     <tr>
                         <td>13835</td>
                         <td>BAUTECH AC. 1</td>
                         <td class="valor-unitario">R$ 17,88</td>
-                        <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
                         <td class="valor-total">R$ -</td>
-                    </tr>
-                    <tr>
+                     </tr>
+                     <tr>
                         <td>6305</td>
-                        <td>BAUTECH AC  2  cinza</td>
+                        <td>BAUTECH AC 2 cinza</td>
                         <td class="valor-unitario">R$ 21,43</td>
-                        <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
                         <td class="valor-total">R$ -</td>
-                    </tr>
-                    <tr>
+                     </tr>
+                     <tr>
                         <td>5827</td>
                         <td>BAUTECH AC. 3</td>
                         <td class="valor-unitario">R$ 32,84</td>
-                        <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
                         <td class="valor-total">R$ -</td>
-                    </tr>
-                    <tr>
+                     </tr>
+                     <tr>
                         <td>5782</td>
-                        <td>BAUTECH AC. 3   branco</td>
+                        <td>BAUTECH AC. 3 branco</td>
                         <td class="valor-unitario">R$ 25,24</td>
-                        <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
                         <td class="valor-total">R$ -</td>
-                    </tr>
-                    <tr>
+                     </tr>
+                     <tr>
                         <td>670</td>
                         <td>BAUTECH acaba trinca cx.,0,5x10</td>
                         <td class="valor-unitario">R$ 30,17</td>
-                        <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
                         <td class="valor-total">R$ -</td>
-                    </tr>
-                    <tr>
+                     </tr>
+                     <tr>
                         <td>6373</td>
                         <td>BAUTECH acrílico</td>
                         <td class="valor-unitario">R$ 127,28</td>
-                        <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
                         <td class="valor-total">R$ -</td>
-                    </tr>
-                    <tr>
+                     </tr>
+                     <tr>
                         <td>14</td>
                         <td>BAUTECH acrílico</td>
                         <td class="valor-unitario">R$ 1.655,08</td>
-                        <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
                         <td class="valor-total">R$ -</td>
-                    </tr>
-                    <tr>
+                     </tr>
+                     <tr>
                         <td>52</td>
                         <td>BAUTECH Acrílico 5000</td>
                         <td class="valor-unitario">R$ 362,49</td>
-                        <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
                         <td class="valor-total">R$ -</td>
-                    </tr>
-                    <tr>
+                     </tr>
+                     <tr>
                         <td>729</td>
                         <td>BAUTECH Acrílico 5000</td>
                         <td class="valor-unitario">R$ 4.833,13</td>
-                        <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
                         <td class="valor-total">R$ -</td>
-                    </tr> 
-                    <tr>
-                     <td>654</td>
-                     <td>BAUTECH Aditivo plastificante 610</td>
-                     <td class="valor-unitario">R$ 311,39</td>
-                     <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-                     <td class="valor-total">R$ -</td>
-                 </tr>
-                 <tr>
-                     <td>731</td>
-                     <td>BAUTECH Aditivo Plastificante 610</td>
-                     <td class="valor-unitario">R$ 3.360,12</td>
-                     <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-                     <td class="valor-total">R$ -</td>
-                 </tr>
-                 <tr>
-                     <td>1035</td>
-                     <td>BAUTECH Aditivo Acelerador ADR 15</td>
-                     <td class="valor-unitario">R$ 51,58</td>
-                     <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-                     <td class="valor-total">R$ -</td>
-                 </tr>
-                 <tr>
-                     <td>2178</td>
-                     <td>BAUTECH Aditivo flutuante p. concreto</td>
-                     <td class="valor-unitario">R$ 32,84</td>
-                     <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-                     <td class="valor-total">R$ -</td>
-                 </tr>
-                 <tr>
-                     <td>6441</td>
-                     <td>BAUTECH Bam (CX COM 12 SACHÊS)</td>
-                     <td class="valor-unitario">R$ 283,47</td>
-                     <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-                     <td class="valor-total">R$ -</td>
-                 </tr>
-                 <tr>
-                     <td>17814</td>
-                     <td>BAUTECH Bloqueio de Umidadade</td>
-                     <td class="valor-unitario">R$ 534,08</td>
-                     <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-                     <td class="valor-total">R$ -</td>
-                 </tr>
-                 <tr>
-                     <td>17593</td>
-                     <td>BAUTECH Bloqueio de Umidadade  6x1</td>
-                     <td class="valor-unitario">R$ 25,35</td>
-                     <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-                     <td class="valor-total">R$ -</td>
-                 </tr>
-                 <tr>
-                     <td>17507</td>
-                     <td>BAUTECH CD Hard</td>
-                     <td class="valor-unitario">R$ 83,05</td>
-                     <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-                     <td class="valor-total">R$ -</td>
-                 </tr>
-                 <tr>
-                     <td>6051</td>
-                     <td>BAUTECH Chapisco Branco</td>
-                     <td class="valor-unitario">R$ 884,88</td>
-                     <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-                     <td class="valor-total">R$ -</td>
-                 </tr>
-                 <tr>
-                     <td>6052</td>
-                     <td>BAUTECH Chapisco Branco</td>
-                     <td class="valor-unitario">R$ 25,29</td>
-                     <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-                     <td class="valor-total">R$ -</td>
-                 </tr>
-                 <tr>
-                     <td>6173</td>
-                     <td>BAUTECH Chapisco Branco</td>
-                     <td class="valor-unitario">R$ 68,64</td>
-                     <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-                     <td class="valor-total">R$ -</td>
-                 </tr>
-                 <tr>
-                     <td>9936</td>
-                     <td>BAUTECH Chapisco Rolado</td>
-                     <td class="valor-unitario">R$ 27,46</td>
-                     <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-                     <td class="valor-total">R$ -</td>
-                 </tr>
-                 <tr>
-                     <td>5352</td>
-                     <td>BAUTECH Cimento branco</td>
-                     <td class="valor-unitario">R$ 241,74</td>
-                     <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-                     <td class="valor-total">R$ -</td>
-                 </tr>
-                 <tr>
-                     <td>22789</td>
-                     <td>BAUTECH ARG. CIM. QUEIMADO</td>
-                     <td class="valor-unitario">R$ 42,75</td>
-                     <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-                     <td class="valor-total">R$ -</td>
-                 </tr>
-                 <tr>
-                     <td>21113</td>
-                     <td>BAUTECH  Efeito Cimento Queimado</td>
-                     <td class="valor-unitario">R$ 53,38</td>
-                     <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-                     <td class="valor-total">R$ -</td>
-                 </tr>
-                 <tr>
-                     <td>19459</td>
-                     <td>BAUTECH Cola Tudo</td>
-                     <td class="valor-unitario">R$ 13,52</td>
-                     <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-                     <td class="valor-total">R$ -</td>
-                 </tr>
-                 <tr>
-                     <td>19458</td>
-                     <td>BAUTECH Prego liquido</td>
-                     <td class="valor-unitario">R$ 14,29</td>
-                     <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-                     <td class="valor-total">R$ -</td>
-                 </tr>
-                 <tr>
-                     <td>19556</td>
-                     <td>BAUTECH Selante silicone veda e cola</td>
-                     <td class="valor-unitario">R$ 17,84</td>
-                     <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-                     <td class="valor-total">R$ -</td>
-                 </tr>
-                 <tr>
-                     <td>19457</td>
-                     <td>BAUTECH FIXA ESPELHO</td>
-                     <td class="valor-unitario">R$ 6,50</td>
-                     <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-                     <td class="valor-total">R$ -</td>
-                 </tr>
-                 <tr>
-                     <td>19460</td>
-                     <td>BAUTECH Cola Tudo Transparente EP</td>
-                     <td class="valor-unitario">R$ 22,47</td>
-                     <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-                     <td class="valor-total">R$ -</td>
-                 </tr>
-                 <tr>
-                     <td>200</td>
-                     <td>BAUTECH CURE</td>
-                     <td class="valor-unitario">R$ 154,36</td>
-                     <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-                     <td class="valor-total">R$ -</td>
-                 </tr>
-                 <tr>
-                     <td>120</td>
-                     <td>BAUTECH CURE</td>
-                     <td class="valor-unitario">R$ 1.508,20</td>
-                     <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-                     <td class="valor-total">R$ -</td>
-                 </tr>
-                 <tr>
-                     <td>9280</td>
-                     <td>BAUTECH Desmoldante OL</td>
-                     <td class="valor-unitario">R$ 59,65</td>
-                     <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-                     <td class="valor-total">R$ -</td>
-                 </tr>
-                 <tr>
-                     <td>931</td>
-                     <td>BAUTECH Desmoldante OL</td>
-                     <td class="valor-unitario">R$ 667,88</td>
-                     <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-                     <td class="valor-total">R$ -</td>
-                 </tr>
-                 <tr>
-                     <td>28</td>
-                     <td>BAUTECH DUR</td>
-                     <td class="valor-unitario">R$ 248,16</td>
-                     <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-                     <td class="valor-total">R$ -</td>
-                 </tr>
-                 <tr>
-                     <td>213</td>
-                     <td>BAUTECH DUR</td>
-                     <td class="valor-unitario">R$ 2.397,54</td>
-                     <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-                     <td class="valor-total">R$ -</td>
-                 </tr>
-                 <tr>
-                     <td>21113</td>
-                     <td>BAUTECH Efeito Cimento Queimado</td>
-                     <td class="valor-unitario">R$ 53,38</td>
-                     <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-                     <td class="valor-total">R$ -</td>
-                 </tr>
-                 <tr>
-                     <td>16727</td>
-                     <td>BAUTECH EMULSÃO ACQUA</td>
-                     <td class="valor-unitario">R$ 16,79</td>
-                     <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-                     <td class="valor-total">R$ -</td>
-                 </tr>
-                 <tr>
-                     <td>16726</td>
-                     <td>BAUTECH EMULSÃO ACQUA</td>
-                     <td class="valor-unitario">R$ 48,25</td>
-                     <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-                     <td class="valor-total">R$ -</td>
-                 </tr>
-                 <tr>
-                     <td>18195</td>
-                     <td>BAUTECH EMULSÃO ACQUA</td>
-                     <td class="valor-unitario">R$ 172,20</td>
-                     <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-                     <td class="valor-total">R$ -</td>
-                 </tr>
-                 <tr>
-                     <td>913</td>
-                     <td>BAUTECH Encunhamento Cinza</td>
-                     <td class="valor-unitario">R$ 29,68</td>
-                     <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-                     <td class="valor-total">R$ -</td>
-                 </tr>
-                 <tr>
-                     <td>17</td>
-                     <td>BAUTECH EP</td>
-                     <td class="valor-unitario">R$ 38,03</td>
-                     <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-                     <td class="valor-total">R$ -</td>
-                 </tr>
-                 <tr>
-                     <td>17688</td>
-                     <td>BAUTECH EP INJEÇÃO</td>
-                     <td class="valor-unitario">R$ 130,79</td>
-                     <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-                     <td class="valor-total">R$ -</td>
-                 </tr>
-                 <tr>
-                     <td>17719</td>
-                     <td>BAUTECH EP PL</td>
-                     <td class="valor-unitario">R$ 126,97</td>
-                     <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-                     <td class="valor-total">R$ -</td>
-                 </tr>
-                 <tr>
-                  <td>17721</td>
-                  <td>BAUTECH EP Sob-aquatico</td>
-                  <td class="valor-unitario">R$ 126,94</td>
-                  <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-                  <td class="valor-total">R$ -</td>
-              </tr>
-              <tr>
-                  <td>40</td>
-                  <td>BAUTECH EP TIX</td>
-                  <td class="valor-unitario">R$ 38,03</td>
-                  <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-                  <td class="valor-total">R$ -</td>
-              </tr>
-              <tr>
-                  <td>41</td>
-                  <td>BAUTECH EP ZN</td>
-                  <td class="valor-unitario">R$ 121,28</td>
-                  <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-                  <td class="valor-total">R$ -</td>
-              </tr>
-              <tr>
-                  <td>23353</td>
-                  <td>BAUTECH Fibra Trinca 46mx10,2cm</td>
-                  <td class="valor-unitario">R$ 46,99</td>
-                  <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-                  <td class="valor-total">R$ -</td>
-              </tr>
-              <tr>
-                  <td>22445</td>
-                  <td>BAUTECH Fita veda tudo 10cmx10m</td>
-                  <td class="valor-unitario">R$ 21,18</td>
-                  <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-                  <td class="valor-total">R$ -</td>
-              </tr>
-              <tr>
-                  <td>22446</td>
-                  <td>BAUTECH Fita veda tudo 20cmx10m</td>
-                  <td class="valor-unitario">R$ 42,35</td>
-                  <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-                  <td class="valor-total">R$ -</td>
-              </tr>
-              <tr>
-                  <td>22447</td>
-                  <td>BAUTECH Fita veda tudo 30cmx10m</td>
-                  <td class="valor-unitario">R$ 63,53</td>
-                  <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-                  <td class="valor-total">R$ -</td>
-              </tr>
-              <tr>
-                  <td>23213</td>
-                  <td>BAUTECH Fita veda tudo 45cmx10m</td>
-                  <td class="valor-unitario">R$ 95,28</td>
-                  <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-                  <td class="valor-total">R$ -</td>
-              </tr>
-              <tr>
-                  <td>23214</td>
-                  <td>BAUTECH Fita veda tudo 90cmx10m</td>
-                  <td class="valor-unitario">R$ 190,21</td>
-                  <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-                  <td class="valor-total">R$ -</td>
-              </tr>
-              <tr>
-                  <td>1046</td>
-                  <td>BAUTECH FIX C</td>
-                  <td class="valor-unitario">R$ 110,55</td>
-                  <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-                  <td class="valor-total">R$ -</td>
-              </tr>
-              <tr>
-                  <td>20884</td>
-                  <td>BAUTECH FIXA TUDO</td>
-                  <td class="valor-unitario">R$ 13,95</td>
-                  <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-                  <td class="valor-total">R$ -</td>
-              </tr>
-              <tr>
-                  <td>16531</td>
-                  <td>BAUTECH FLEX 68</td>
-                  <td class="valor-unitario">R$ 182,09</td>
-                  <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-                  <td class="valor-total">R$ -</td>
-              </tr>
-              <tr>
-                  <td>16530</td>
-                  <td>BAUTECH FLEX 68</td>
-                  <td class="valor-unitario">R$ 951,60</td>
-                  <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-                  <td class="valor-total">R$ -</td>
-              </tr>
-              <tr>
-                  <td>2176</td>
-                  <td>BAUTECH FUNDAÇÃO</td>
-                  <td class="valor-unitario">R$ 608,18</td>
-                  <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-                  <td class="valor-total">R$ -</td>
-              </tr>
-              <tr>
-                  <td>2177</td>
-                  <td>BAUTECH FUNDAÇÃO</td>
-                  <td class="valor-unitario">R$ 3.892,39</td>
-                  <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-                  <td class="valor-total">R$ -</td>
-              </tr>
-              <tr>
-                  <td>13694</td>
-                  <td>BAUTECH GELADO impermeab.telhado</td>
-                  <td class="valor-unitario">R$ 262,08</td>
-                  <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-                  <td class="valor-total">R$ -</td>
-              </tr>
-              <tr>
-                  <td>323</td>
-                  <td>BAUTECH GRAUTE</td>
-                  <td class="valor-unitario">R$ 22,51</td>
-                  <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-                  <td class="valor-total">R$ -</td>
-              </tr>
-              <tr>
-                  <td>5916</td>
-                  <td>BAUTECH GRUTE Cimento Sus Aquático</td>
-                  <td class="valor-unitario">R$ 204,33</td>
-                  <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-                  <td class="valor-total">R$ -</td>
-              </tr>
-              <tr>
-                  <td>687</td>
-                  <td>BAUTECH GRAUTE EP</td>
-                  <td class="valor-unitario">R$ 875,23</td>
-                  <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-                  <td class="valor-total">R$ -</td>
-              </tr>
-              <tr>
-                  <td>3</td>
-                  <td>BAUTECH GRAUTE EP Super fluido</td>
-                  <td class="valor-unitario">R$ 1.675,15</td>
-                  <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-                  <td class="valor-total">R$ -</td>
-              </tr>
-              <tr>
-                  <td>5761</td>
-                  <td>BAUTECH GRAUTE TIX</td>
-                  <td class="valor-unitario">R$ 25,32</td>
-                  <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-                  <td class="valor-total">R$ -</td>
-              </tr>
-              <tr>
-                  <td>9494</td>
-                  <td>BAUTECH IMPER PÓ</td>
-                  <td class="valor-unitario">R$ 56,95</td>
-                  <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-                  <td class="valor-total">R$ -</td>
-              </tr>
-              <tr>
-                  <td>21111</td>
-                  <td>BAUTECH Impermeab.de Tecido</td>
-                  <td class="valor-unitario">R$ 26,15</td>
-                  <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-                  <td class="valor-total">R$ -</td>
-              </tr>
-              <tr>
-                  <td>20451</td>
-                  <td>BAUTECH KIT Reparo Parede e Trincas</td>
-                  <td class="valor-unitario">R$ 73,56</td>
-                  <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-                  <td class="valor-total">R$ -</td>
-              </tr>
-              <tr>
-                  <td>6036</td>
-                  <td>BAUTECH Manta Liq., branca,cinza,conc.</td>
-                  <td class="valor-unitario">R$ 51,59</td>
-                  <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-                  <td class="valor-total">R$ -</td>
-              </tr>
-              <tr>
-                  <td>6037</td>
-                  <td>BAUTECH Manta LIq., brc. Cinza concreto</td>
-                  <td class="valor-unitario">R$ 131,58</td>
-                  <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-                  <td class="valor-total">R$ -</td>
-              </tr>
-              <tr>
-                  <td>13693</td>
-                  <td>BAUTECH MANTA LIQUIDA, branca</td>
-                  <td class="valor-unitario">R$ 161,49</td>
-                  <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-                  <td class="valor-total">R$ -</td>
-              </tr>
-              <tr>
-                  <td>22961</td>
-                  <td>BAUTECH Manta Liquida  Incolor</td>
-                  <td class="valor-unitario">R$ 305,89</td>
-                  <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-                  <td class="valor-total">R$ -</td>
-              </tr>
-              <tr>
-                  <td>6050</td>
-                  <td>BAUTECH Manta liquida transparente</td>
-                  <td class="valor-unitario">R$ 359,50</td>
-                  <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-                  <td class="valor-total">R$ -</td>
-              </tr>
-              <tr>
-                  <td>23609</td>
-                  <td>BAUTECH MANTA L. TELHADOS E LAJES</td>
-                  <td class="valor-unitario">R$ 204,18</td>
-                  <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-                  <td class="valor-total">R$ -</td>
-              </tr>
-              <tr>
-               <td>21788</td>
-               <td>BAUTECH MANTA L. ANTIGOTEIRA</td>
-               <td class="valor-unitario">R$ 217,74</td>
-               <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-               <td class="valor-total">R$ -</td>
-           </tr>
-           <tr>
-               <td>18628</td>
-               <td>BAUTECH MASSA ACRILICA</td>
-               <td class="valor-unitario">R$ 44,25</td>
-               <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-               <td class="valor-total">R$ -</td>
-           </tr>
-           <tr>
-               <td>15109</td>
-               <td>BAUTECH MASSA ACRILICA</td>
-               <td class="valor-unitario">R$ 131,18</td>
-               <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-               <td class="valor-total">R$ -</td>
-           </tr>
-           <tr>
-               <td>23262</td>
-               <td>BAUTECH Massa corrida Pó</td>
-               <td class="valor-unitario">R$ 39,19</td>
-               <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-               <td class="valor-total">R$ -</td>
-           </tr>
-           <tr>
-               <td>9947</td>
-               <td>BAUTECH Massa corrida</td>
-               <td class="valor-unitario">R$ 25,39</td>
-               <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-               <td class="valor-total">R$ -</td>
-           </tr>
-           <tr>
-               <td>16663</td>
-               <td>BAUTECH Massa corrida</td>
-               <td class="valor-unitario">R$ 81,85</td>
-               <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-               <td class="valor-total">R$ -</td>
-           </tr>
-           <tr>
-               <td>18906</td>
-               <td>BAUTECH Memb. Impermeavel preta</td>
-               <td class="valor-unitario">R$ 119,62</td>
-               <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-               <td class="valor-total">R$ -</td>
-           </tr>
-           <tr>
-               <td>18907</td>
-               <td>BAUTECH Memb. Impermeavel preta</td>
-               <td class="valor-unitario">R$ 40,47</td>
-               <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-               <td class="valor-total">R$ -</td>
-           </tr>
-           <tr>
-               <td>19350</td>
-               <td>BAUTECH Mega Manta PU</td>
-               <td class="valor-unitario">R$ 697,65</td>
-               <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-               <td class="valor-total">R$ -</td>
-           </tr>
-           <tr>
-               <td>14604</td>
-               <td>BAUTECH Mega Manta Poliureia 90 shore</td>
-               <td class="valor-unitario">R$ 1.293,42</td>
-               <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-               <td class="valor-total">R$ -</td>
-           </tr>
-           <tr>
-               <td>3347</td>
-               <td>BAUTECH NIVELMIX NA 7 cinza</td>
-               <td class="valor-unitario">R$ 162,33</td>
-               <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-               <td class="valor-total">R$ -</td>
-           </tr>
-           <tr>
-               <td>21672</td>
-               <td>BAUTECH NIVELMIX  BASE</td>
-               <td class="valor-unitario">R$ 57,30</td>
-               <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-               <td class="valor-total">R$ -</td>
-           </tr>
-           <tr>
-               <td>20530</td>
-               <td>BAUTECH Imperparede</td>
-               <td class="valor-unitario">R$ 38,78</td>
-               <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-               <td class="valor-total">R$ -</td>
-           </tr>
-           <tr>
-               <td>21752</td>
-               <td>BAUTECH Imperparede</td>
-               <td class="valor-unitario">R$ 135,37</td>
-               <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-               <td class="valor-total">R$ -</td>
-           </tr>
-           <tr>
-               <td>18863</td>
-               <td>BAUTECH Pigmento Pó  10x0,5gr</td>
-               <td class="valor-unitario">R$ 12,41</td>
-               <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-               <td class="valor-total">R$ -</td>
-           </tr>
-           <tr>
-               <td>18862</td>
-               <td>BAUTECH Pigmento Pó 20x0,250gr20</td>
-               <td class="valor-unitario">R$ 6,94</td>
-               <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-               <td class="valor-total">R$ -</td>
-           </tr>
-           <tr>
-               <td>19095</td>
-               <td>BAUTECH Pintura Asfaltica</td>
-               <td class="valor-unitario">R$ 36,85</td>
-               <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-               <td class="valor-total">R$ -</td>
-           </tr>
-           <tr>
-               <td>19653</td>
-               <td>BAUTECH Pintura Asfaltica</td>
-               <td class="valor-unitario">R$ 104,28</td>
-               <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-               <td class="valor-total">R$ -</td>
-           </tr>
-           <tr>
-               <td>19161</td>
-               <td>BAUTECH Pintura Asfaltica</td>
-               <td class="valor-unitario">R$ 1.328,25</td>
-               <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-               <td class="valor-total">R$ -</td>
-           </tr>
-           <tr>
-               <td>6048</td>
-               <td>BAUTECH PISCINA MLASTIC</td>
-               <td class="valor-unitario">R$ 338,06</td>
-               <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-               <td class="valor-total">R$ -</td>
-           </tr>
-           <tr>
-               <td>18310</td>
-               <td>BAUTECH PISO ACUSTICO</td>
-               <td class="valor-unitario">R$ 181,84</td>
-               <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-               <td class="valor-total">R$ -</td>
-           </tr>
-           <tr>
-               <td>17245</td>
-               <td>BAUTEC PORCELANATO INTER, Argamassa</td>
-               <td class="valor-unitario">R$ 25,16</td>
-               <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-               <td class="valor-total">R$ -</td>
-           </tr>
-           <tr>
-               <td>63</td>
-               <td>BAUTECH PLAST C</td>
-               <td class="valor-unitario">R$ 520,89</td>
-               <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-               <td class="valor-total">R$ -</td>
-           </tr>
-           <tr>
-               <td>81</td>
-               <td>BAUTECH PLAST C</td>
-               <td class="valor-unitario">R$ 22,58</td>
-               <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-               <td class="valor-total">R$ -</td>
-           </tr>
-           <tr>
-               <td>9661</td>
-               <td>BAUTECH PLAST C</td>
-               <td class="valor-unitario">R$ 47,20</td>
-               <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-               <td class="valor-total">R$ -</td>
-           </tr>
-           <tr>
-               <td>392</td>
-               <td>BAUTECH PLAST C 1X6 L</td>
-               <td class="valor-unitario">R$ 14,99</td>
-               <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-               <td class="valor-total">R$ -</td>
-           </tr>
-           <tr>
-               <td>731</td>
-               <td>BAUTECH PLASTIFICANTE 610</td>
-               <td class="valor-unitario">R$ 311,39</td>
-               <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-               <td class="valor-total">R$ -</td>
-           </tr>
-           <tr>
-               <td>654</td>
-               <td>BAUTECH PLASTIFICANTE 610</td>
-               <td class="valor-unitario">R$ 3.660,12</td>
-               <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-               <td class="valor-total">R$ -</td>
-           </tr>
-           <tr>
-               <td>328</td>
-               <td>BAUTECH Primer EP (branco, cinza)</td>
-               <td class="valor-unitario">R$ 510,07</td>
-               <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-               <td class="valor-total">R$ -</td>
-           </tr>
-           <tr>
-               <td>346</td>
-               <td>BAUTECH Primer EPA</td>
-               <td class="valor-unitario">R$ 510,07</td>
-               <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-               <td class="valor-total">R$ -</td>
-           </tr>
-           <tr>
-            <td>204</td>
-            <td>BAUTECH Primer P5</td>
-            <td class="valor-unitario">R$ 329,01</td>
-            <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-            <td class="valor-total">R$ -</td>
-        </tr>
-        <tr>
-            <td>16730</td>
-            <td>BAUTECH PROTEGE</td>
-            <td class="valor-unitario">R$ 165,07</td>
-            <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-            <td class="valor-total">R$ -</td>
-        </tr>
-        <tr>
-            <td>20650</td>
-            <td>BAUTECH Protege fundo armario</td>
-            <td class="valor-unitario">R$ 31,00</td>
-            <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-            <td class="valor-total">R$ -</td>
-        </tr>
-        <tr>
-            <td>20649</td>
-            <td>BAUTECH Protege, Parede e Piso</td>
-            <td class="valor-unitario">R$ 32,28</td>
-            <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-            <td class="valor-total">R$ -</td>
-        </tr>
-        <tr>
-            <td>18481</td>
-            <td>BAUTECH RAPCOLA</td>
-            <td class="valor-unitario">R$ 195,06</td>
-            <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-            <td class="valor-total">R$ -</td>
-        </tr>
-        <tr>
-            <td>13787</td>
-            <td>BAUTECH RAPDEZ  5X5</td>
-            <td class="valor-unitario">R$ 53,93</td>
-            <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-            <td class="valor-total">R$ -</td>
-        </tr>
-        <tr>
-            <td>19918</td>
-            <td>BAUTECH Rapfinish massa regularizadora</td>
-            <td class="valor-unitario">R$ 127,97</td>
-            <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-            <td class="valor-total">R$ -</td>
-        </tr>
-        <tr>
-            <td>17686</td>
-            <td>BAUTECH RAPFINISH Cinza (8x3kg)</td>
-            <td class="valor-unitario">R$ 61,61</td>
-            <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-            <td class="valor-total">R$ -</td>
-        </tr>
-        <tr>
-            <td>20009</td>
-            <td>BAUTECH RAPFLEX PVA</td>
-            <td class="valor-unitario">R$ 203,93</td>
-            <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-            <td class="valor-total">R$ -</td>
-        </tr>
-        <tr>
-            <td>17124</td>
-            <td>BAUTECH RAPFLEX 10</td>
-            <td class="valor-unitario">R$ 361,59</td>
-            <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-            <td class="valor-total">R$ -</td>
-        </tr>
-        <tr>
-            <td>4888</td>
-            <td>BAUTECH RAPFLEX 250</td>
-            <td class="valor-unitario">R$ 705,19</td>
-            <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-            <td class="valor-total">R$ -</td>
-        </tr>
-        <tr>
-            <td>4825</td>
-            <td>BAUTECH RAPFLEX 500</td>
-            <td class="valor-unitario">R$ 705,19</td>
-            <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-            <td class="valor-total">R$ -</td>
-        </tr>
-        <tr>
-            <td>21097</td>
-            <td>BAUTECH REBOSET (aditivo)</td>
-            <td class="valor-unitario">R$ 181,15</td>
-            <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-            <td class="valor-total">R$ -</td>
-        </tr>
-        <tr>
-            <td>426</td>
-            <td>BAUTECH RAPFLEX PLUS (KIT)</td>
-            <td class="valor-unitario">R$ 383,34</td>
-            <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-            <td class="valor-total">R$ -</td>
-        </tr>
-        <tr>
-            <td>4776</td>
-            <td>BAUTECH RAPGROUT</td>
-            <td class="valor-unitario">R$ 247,48</td>
-            <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-            <td class="valor-total">R$ -</td>
-        </tr>
-        <tr>
-            <td>21618</td>
-            <td>BAUTECH Rejuntamento Epoxi, branco</td>
-            <td class="valor-unitario">R$ 45,89</td>
-            <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-            <td class="valor-total">R$ -</td>
-        </tr>
-        <tr>
-            <td>17347</td>
-            <td>BAUTECH Rejunte 1kg</td>
-            <td class="valor-unitario">R$ 13,56</td>
-            <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-            <td class="valor-total">R$ -</td>
-        </tr>
-        <tr>
-            <td>18210</td>
-            <td>BAUTECH Rejunte Piscina Plus, cinza,azul, verde</td>
-            <td class="valor-unitario">R$ 145,80</td>
-            <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-            <td class="valor-total">R$ -</td>
-        </tr>
-        <tr>
-            <td>13837</td>
-            <td>BAUTECH RejunteFlex ciment. 5x5k</td>
-            <td class="valor-unitario">R$ 94,96</td>
-            <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-            <td class="valor-total">R$ -</td>
-        </tr>
-        <tr>
-            <td>16572</td>
-            <td>BAUTECH Rejunte Acr. Líquido (9x0,470)</td>
-            <td class="valor-unitario">R$ 15,06</td>
-            <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-            <td class="valor-total">R$ -</td>
-        </tr>
-        <tr>
-            <td>79</td>
-            <td>BAUTECH Anti Ataque</td>
-            <td class="valor-unitario">R$ 82,82</td>
-            <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-            <td class="valor-total">R$ -</td>
-        </tr>
-        <tr>
-            <td>65</td>
-            <td>BAUTECH Rejunte Epoxi anti ataque</td>
-            <td class="valor-unitario">R$ 100,75</td>
-            <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-            <td class="valor-total">R$ -</td>
-        </tr>
-        <tr>
-            <td>5212</td>
-            <td>BAUTECH RESINA ACR.Multiuso A.B</td>
-            <td class="valor-unitario">R$ 67,34</td>
-            <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-            <td class="valor-total">R$ -</td>
-        </tr>
-        <tr>
-            <td>10181</td>
-            <td>BAUTECH RESINA ACR.Multiuso A.B</td>
-            <td class="valor-unitario">R$ 187,17</td>
-            <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-            <td class="valor-total">R$ -</td>
-        </tr>
-        <tr>
-            <td>5213</td>
-            <td>BAUTECH RESINA ACR.Multiuso fosco</td>
-            <td class="valor-unitario">R$ 46,22</td>
-            <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-            <td class="valor-total">R$ -</td>
-        </tr>
-        <tr>
-            <td>10068</td>
-            <td>BAUTECH RESINA ACR. Multiuso fosco</td>
-            <td class="valor-unitario">R$ 154,40</td>
-            <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-            <td class="valor-total">R$ -</td>
-        </tr>
-        <tr>
-            <td>20529</td>
-            <td>BAUTECH,RESINA Protege pedra</td>
-            <td class="valor-unitario">R$ 47,57</td>
-            <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-            <td class="valor-total">R$ -</td>
-        </tr>
-        <tr>
-         <td>20526</td>
-         <td>BAUTECH RESINA Protege Pisos</td>
-         <td class="valor-unitario">R$ 47,57</td>
-         <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-         <td class="valor-total">R$ -</td>
-     </tr>
-     <tr>
-         <td>20527</td>
-         <td>BAUTECH RESINA Protege telhas (4 cores)</td>
-         <td class="valor-unitario">R$ 47,57</td>
-         <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-         <td class="valor-total">R$ -</td>
-     </tr>
-     <tr>
-         <td>20528</td>
-         <td>BAUTECH RESINA Protege Tijolos</td>
-         <td class="valor-unitario">R$ 47,57</td>
-         <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-         <td class="valor-total">R$ -</td>
-     </tr>
-     <tr>
-         <td>9905</td>
-         <td>BAUTECH RODAPÉ</td>
-         <td class="valor-unitario">R$ 64,24</td>
-         <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-         <td class="valor-total">R$ -</td>
-     </tr>
-     <tr>
-         <td>19815</td>
-         <td>BAUTECH RODAPÉ</td>
-         <td class="valor-unitario">R$ 111,48</td>
-         <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-         <td class="valor-total">R$ -</td>
-     </tr>
-     <tr>
-         <td>5836</td>
-         <td>BAUTECH RODAPÉ</td>
-         <td class="valor-unitario">R$ 159,71</td>
-         <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-         <td class="valor-total">R$ -</td>
-     </tr>
-     <tr>
-         <td>3350</td>
-         <td>BAUTECH S 88</td>
-         <td class="valor-unitario">R$ 88,12</td>
-         <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-         <td class="valor-total">R$ -</td>
-     </tr>
-     <tr>
-         <td>13678</td>
-         <td>BAUTECH SEC RÁPIDO</td>
-         <td class="valor-unitario">R$ 488,92</td>
-         <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-         <td class="valor-total">R$ -</td>
-     </tr>
-     <tr>
-         <td>15237</td>
-         <td>BAUTECH SELADOR ACRÍLICO</td>
-         <td class="valor-unitario">R$ 24,17</td>
-         <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-         <td class="valor-total">R$ -</td>
-     </tr>
-     <tr>
-         <td>15428</td>
-         <td>BAUTECH SELADOR ACRÍLICO</td>
-         <td class="valor-unitario">R$ 74,29</td>
-         <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-         <td class="valor-total">R$ -</td>
-     </tr>
-     <tr>
-         <td>19780</td>
-         <td>BAUTECH SELADOR PARA GESSO</td>
-         <td class="valor-unitario">R$ 91,29</td>
-         <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-         <td class="valor-total">R$ -</td>
-     </tr>
-     <tr>
-         <td>21686</td>
-         <td>BAUTECH Selan. PU40,Brc.bege,cinza,preto</td>
-         <td class="valor-unitario">R$ 16,73</td>
-         <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-         <td class="valor-total">R$ -</td>
-     </tr>
-     <tr>
-         <td>21682</td>
-         <td>BAUTECH Acaba trinca selante acr.</td>
-         <td class="valor-unitario">R$ 10,59</td>
-         <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-         <td class="valor-total">R$ -</td>
-     </tr>
-     <tr>
-         <td>166</td>
-         <td>BAUTECH ACABA TRINCA, 5kg</td>
-         <td class="valor-unitario">R$ 30,17</td>
-         <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-         <td class="valor-total">R$ -</td>
-     </tr>
-     <tr>
-         <td>20233</td>
-         <td>BAUTECH SELANTE ACRILICO</td>
-         <td class="valor-unitario">R$ 18,11</td>
-         <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-         <td class="valor-total">R$ -</td>
-     </tr>
-     <tr>
-         <td>3456</td>
-         <td>BAUTECH SELANTE ACRILICO</td>
-         <td class="valor-unitario">R$ 69,75</td>
-         <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-         <td class="valor-total">R$ -</td>
-     </tr>
-     <tr>
-         <td>235</td>
-         <td>BAUTECH SELANTE PU 2/40</td>
-         <td class="valor-unitario">R$ 635,45</td>
-         <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-         <td class="valor-total">R$ -</td>
-     </tr>
-     <tr>
-         <td>96</td>
-         <td>BAUTECH SELANTE PU 2/80</td>
-         <td class="valor-unitario">R$ 635,45</td>
-         <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-         <td class="valor-total">R$ -</td>
-     </tr>
-     <tr>
-         <td>21783</td>
-         <td>BAUTECH Sel. Silicone veda e cola</td>
-         <td class="valor-unitario">R$ 12,99</td>
-         <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-         <td class="valor-total">R$ -</td>
-     </tr>
-     <tr>
-         <td>17515</td>
-         <td>BAUTECH Sel. Silicone cartucho</td>
-         <td class="valor-unitario">R$ 16,75</td>
-         <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-         <td class="valor-total">R$ -</td>
-     </tr>
-     <tr>
-         <td>13717</td>
-         <td>BAUTECH SKIN COAT externo</td>
-         <td class="valor-unitario">R$ 58,20</td>
-         <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-         <td class="valor-total">R$ -</td>
-     </tr>
-     <tr>
-         <td>15064</td>
-         <td>BAUTECH SKIN COAT interno</td>
-         <td class="valor-unitario">R$ 32,84</td>
-         <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-         <td class="valor-total">R$ -</td>
-     </tr>
-     <tr>
-         <td>656</td>
-         <td>BAUTECH STONES OLEOFUGANTE</td>
-         <td class="valor-unitario">R$ 88,12</td>
-         <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-         <td class="valor-total">R$ -</td>
-     </tr>
-     <tr>
-         <td>376</td>
-         <td>BAUTECH STOP B2</td>
-         <td class="valor-unitario">R$ 227,65</td>
-         <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-         <td class="valor-total">R$ -</td>
-     </tr>
-     <tr>
-         <td>21425</td>
-         <td>BAUTECH Selante vidro e aluminio</td>
-         <td class="valor-unitario">R$ 17,83</td>
-         <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-         <td class="valor-total">R$ -</td>
-     </tr>
-     <tr>
-         <td>21474</td>
-         <td>MSET TELA IMP. 1.05mx50m</td>
-         <td class="valor-unitario">R$ 316,96</td>
-         <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-         <td class="valor-total">R$ -</td>
-     </tr>
-     <tr>
-         <td>22679</td>
-         <td>BAUTECH Tela fibra vidro,5x5mm,1mx50m</td>
-         <td class="valor-unitario">R$ 606,37</td>
-         <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-         <td class="valor-total">R$ -</td>
-     </tr>
-     <tr>
-         <td>23355</td>
-         <td>BAUTECH Tela Trinca parede, 45mx4,8cm</td>
-         <td class="valor-unitario">R$ 14,86</td>
-         <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-         <td class="valor-total">R$ -</td>
-     </tr>
-     <tr>
-         <td>19814</td>
-         <td>BAUTECH TINTA GESSO Brc.</td>
-         <td class="valor-unitario">R$ 130,10</td>
-         <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-         <td class="valor-total">R$ -</td>
-     </tr>
-     <tr>
-         <td>18901</td>
-         <td>BAUTECH TINTA super AC e COB. Brc..</td>
-         <td class="valor-unitario">R$ 232,60</td>
-         <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-         <td class="valor-total">R$ -</td>
-     </tr>
-     <tr>
-         <td>18902</td>
-         <td>BAUTECH TINTA super AC e COB. Brc..</td>
-         <td class="valor-unitario">R$ 50,77</td>
-         <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-         <td class="valor-total">R$ -</td>
-     </tr>
-     <tr>
-         <td>20413</td>
-         <td>BAUTECH Tinta Zero Bolor Brc. CONTRA FUNGO</td>
-         <td class="valor-unitario">R$ 17,09</td>
-         <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-         <td class="valor-total">R$ -</td>
-     </tr>
-     <tr>
-         <td>16042</td>
-         <td>BAUTECH Tinta PREMIUM S. LAVAVEL</td>
-         <td class="valor-unitario">R$ 72,96</td>
-         <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-         <td class="valor-total">R$ -</td>
-     </tr>
-     <tr>
-         <td>16041</td>
-         <td>BAUTECH Tinta PREMIUM S. LAVAVEL</td>
-         <td class="valor-unitario">R$ 326,30</td>
-         <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-         <td class="valor-total">R$ -</td>
-     </tr>
-     <tr>
-      <td>272</td>
-      <td>BAUTECH COAT BRANCO( cinza,cód.327)</td>
-      <td class="valor-unitario">R$ 76,45</td>
-      <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-      <td class="valor-total">R$ -</td>
-  </tr>
-  <tr>
-      <td>23057</td>
-      <td>BAUTECH TINTA EMBORRACHADA</td>
-      <td class="valor-unitario">R$ 71,57</td>
-      <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-      <td class="valor-total">R$ -</td>
-  </tr>
-  <tr>
-      <td>22755</td>
-      <td>BAUTECH TINTA EMBORRACHADA</td>
-      <td class="valor-unitario">R$ 240,89</td>
-      <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-      <td class="valor-total">R$ -</td>
-  </tr>
-  <tr>
-      <td>23609</td>
-      <td>BAUTECH TINTA TELHADO E LAJES</td>
-      <td class="valor-unitario">R$ 204,18</td>
-      <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-      <td class="valor-total">R$ -</td>
-  </tr>
-  <tr>
-      <td>20448</td>
-      <td>BAUTECH TINTA PU PARA PISCINA</td>
-      <td class="valor-unitario">R$ 341,55</td>
-      <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-      <td class="valor-total">R$ -</td>
-  </tr>
-  <tr>
-      <td>23019</td>
-      <td>BAUTECH Tinta Pintura litoral</td>
-      <td class="valor-unitario">R$ 230,93</td>
-      <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-      <td class="valor-total">R$ -</td>
-  </tr>
-  <tr>
-      <td>23062</td>
-      <td>BAUTECH Tinta Pintura Litoral</td>
-      <td class="valor-unitario">R$ 60,99</td>
-      <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-      <td class="valor-total">R$ -</td>
-  </tr>
-  <tr>
-      <td>23426</td>
-      <td>BAUTECH Tinta Borracha liquida</td>
-      <td class="valor-unitario">R$ 478,80</td>
-      <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-      <td class="valor-total">R$ -</td>
-  </tr>
-  <tr>
-      <td>23432</td>
-      <td>BAUTECH Tinta Repinta Fachada</td>
-      <td class="valor-unitario">R$ 295,95</td>
-      <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-      <td class="valor-total">R$ -</td>
-  </tr>
-  <tr>
-      <td>17657</td>
-      <td>BAUTECH TINTA ECONOMICA</td>
-      <td class="valor-unitario">R$ 34,08</td>
-      <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-      <td class="valor-total">R$ -</td>
-  </tr>
-  <tr>
-      <td>16658</td>
-      <td>BAUTECH TINTA ECONOMICA</td>
-      <td class="valor-unitario">R$ 116,35</td>
-      <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-      <td class="valor-total">R$ -</td>
-  </tr>
-  <tr>
-      <td>21866</td>
-      <td>BAUTECH TINTA ECONOMICA</td>
-      <td class="valor-unitario">R$ 125,66</td>
-      <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-      <td class="valor-total">R$ -</td>
-  </tr>
-  <tr>
-      <td>20412</td>
-      <td>BAUTECH TINTA EMBORRACHADA rep.ext.</td>
-      <td class="valor-unitario">R$ 22,98</td>
-      <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-      <td class="valor-total">R$ -</td>
-  </tr>
-  <tr>
-      <td>19317</td>
-      <td>BAUTECH EPOXI BRILH. (A+B)</td>
-      <td class="valor-unitario">R$ 283,84</td>
-      <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-      <td class="valor-total">R$ -</td>
-  </tr>
-  <tr>
-      <td>18916</td>
-      <td>BAUTECH TINTA MINERAL</td>
-      <td class="valor-unitario">R$ 174,33</td>
-      <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-      <td class="valor-total">R$ -</td>
-  </tr>
-  <tr>
-      <td>22144</td>
-      <td>BAUTECH esmalte fosco( amar.azul graf.plat.preto verm.)</td>
-      <td class="valor-unitario">R$ 85,89</td>
-      <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-      <td class="valor-total">R$ -</td>
-  </tr>
-  <tr>
-      <td>19992</td>
-      <td>BAUTECH TINTA PISO</td>
-      <td class="valor-unitario">R$ 56,65</td>
-      <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-      <td class="valor-total">R$ -</td>
-  </tr>
-  <tr>
-      <td>18993</td>
-      <td>BAUTECH TINTA PISO</td>
-      <td class="valor-unitario">R$ 238,00</td>
-      <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-      <td class="valor-total">R$ -</td>
-  </tr>
-  <tr>
-      <td>692</td>
-      <td>BAUTECH Tinta PU (AMARELA, VERMELHA)</td>
-      <td class="valor-unitario">R$ 410,00</td>
-      <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-      <td class="valor-total">R$ -</td>
-  </tr>
-  <tr>
-      <td>502</td>
-      <td>BAUTECH Tinta PU (CINZA, CINZA CLARO, PRETA, VERDE)</td>
-      <td class="valor-unitario">R$ 398,00</td>
-      <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-      <td class="valor-total">R$ -</td>
-  </tr>
-  <tr>
-      <td>502</td>
-      <td>BAUTECH Tinta PU Azul ( PISCINA FIBRA VIDRO)</td>
-      <td class="valor-unitario">R$ 398,00</td>
-      <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-      <td class="valor-total">R$ -</td>
-  </tr>
-  <tr>
-      <td>502</td>
-      <td>BAUTECH Tinta PU Branca ( PISCINA FIBRA VIDRO)</td>
-      <td class="valor-unitario">R$ 398,00</td>
-      <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-      <td class="valor-total">R$ -</td>
-  </tr>
-  <tr>
-      <td>20414</td>
-      <td>BAUTECH Tinta Sobre Azulejo (CX COM 6)</td>
-      <td class="valor-unitario">R$ 55,83</td>
-      <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-      <td class="valor-total">R$ -</td>
-  </tr>
-  <tr>
-      <td>18902</td>
-      <td>BAUTECH Tinta Super Acabamento e Cobertura</td>
-      <td class="valor-unitario">R$ 50,77</td>
-      <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-      <td class="valor-total">R$ -</td>
-  </tr>
-  <tr>
-      <td>18901</td>
-      <td>BAUTECH Tinta Super Acabamento e Cobertura 300m</td>
-      <td class="valor-unitario">R$ 232,60</td>
-      <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-      <td class="valor-total">R$ -</td>
-  </tr>
-  <tr>
-      <td>6247</td>
-      <td>BAUTECH Tinta Teto Banheiro</td>
-      <td class="valor-unitario">R$ 73,85</td>
-      <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-      <td class="valor-total">R$ -</td>
-  </tr>
-  <tr>
-      <td>13380</td>
-      <td>BAUTECH Transparente  Fosco</td>
-      <td class="valor-unitario">R$ 359,50</td>
-      <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-      <td class="valor-total">R$ -</td>
-  </tr>
-  <tr>
-      <td>21681</td>
-      <td>BAUTECH Veda Calha (CX COM 12) CINZA</td>
-      <td class="valor-unitario">R$ 8,24</td>
-      <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-      <td class="valor-total">R$ -</td>
-  </tr>
-  <tr>
-      <td>16094</td>
-      <td>BAUTECH VEDA FRISO 12 KG</td>
-      <td class="valor-unitario">R$ 174,98</td>
-      <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-      <td class="valor-total">R$ -</td>
-  </tr>
-  <tr>
-      <td>20655</td>
-      <td>BAUTECH Verniz Anti Pichação (CX COM 6)</td>
-      <td class="valor-unitario">R$ 71,88</td>
-      <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-      <td class="valor-total">R$ -</td>
-  </tr>
-  <tr>
-      <td>20654</td>
-      <td>BAUTECH Verniz PU MONO (CX COM 6)</td>
-      <td class="valor-unitario">R$ 88,31</td>
-      <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-      <td class="valor-total">R$ -</td>
-  </tr>
-  <tr>
-      <td>19694</td>
-      <td>BAUTECH VERNIZ ANTIDERRAPANTE</td>
-      <td class="valor-unitario">R$ 76,25</td>
-      <td><input type="number" class="qtd-pedido" value="0" min="1" max="999"></td>
-      <td class="valor-total">R$ -</td>
-  </tr>
-                                                           
+                     </tr>
+                     <tr>
+                        <td>654</td>
+                        <td>BAUTECH Aditivo plastificante 610</td>
+                        <td class="valor-unitario">R$ 311,39</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>731</td>
+                        <td>BAUTECH Aditivo Plastificante 610</td>
+                        <td class="valor-unitario">R$ 3.360,12</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>1035</td>
+                        <td>BAUTECH Aditivo Acelerador ADR 15</td>
+                        <td class="valor-unitario">R$ 51,58</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>2178</td>
+                        <td>BAUTECH Aditivo flutuante p. concreto</td>
+                        <td class="valor-unitario">R$ 32,84</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>6441</td>
+                        <td>BAUTECH Bam (CX COM 12 SACHÊS)</td>
+                        <td class="valor-unitario">R$ 283,47</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>17814</td>
+                        <td>BAUTECH Bloqueio de Umidadade</td>
+                        <td class="valor-unitario">R$ 534,08</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>17593</td>
+                        <td>BAUTECH Bloqueio de Umidadade 6x1</td>
+                        <td class="valor-unitario">R$ 25,35</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>17507</td>
+                        <td>BAUTECH CD Hard</td>
+                        <td class="valor-unitario">R$ 83,05</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>6051</td>
+                        <td>BAUTECH Chapisco Branco</td>
+                        <td class="valor-unitario">R$ 884,88</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>6052</td>
+                        <td>BAUTECH Chapisco Branco</td>
+                        <td class="valor-unitario">R$ 25,29</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>6173</td>
+                        <td>BAUTECH Chapisco Branco</td>
+                        <td class="valor-unitario">R$ 68,64</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>9936</td>
+                        <td>BAUTECH Chapisco Rolado</td>
+                        <td class="valor-unitario">R$ 27,46</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>5352</td>
+                        <td>BAUTECH Cimento branco</td>
+                        <td class="valor-unitario">R$ 241,74</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>22789</td>
+                        <td>BAUTECH ARG. CIM. QUEIMADO</td>
+                        <td class="valor-unitario">R$ 42,75</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>21113</td>
+                        <td>BAUTECH Efeito Cimento Queimado</td>
+                        <td class="valor-unitario">R$ 53,38</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>19459</td>
+                        <td>BAUTECH Cola Tudo</td>
+                        <td class="valor-unitario">R$ 13,52</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>19458</td>
+                        <td>BAUTECH Prego liquido</td>
+                        <td class="valor-unitario">R$ 14,29</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>19556</td>
+                        <td>BAUTECH Selante silicone veda e cola</td>
+                        <td class="valor-unitario">R$ 17,84</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>19457</td>
+                        <td>BAUTECH FIXA ESPELHO</td>
+                        <td class="valor-unitario">R$ 6,50</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>19460</td>
+                        <td>BAUTECH Cola Tudo Transparente EP</td>
+                        <td class="valor-unitario">R$ 22,47</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>200</td>
+                        <td>BAUTECH CURE</td>
+                        <td class="valor-unitario">R$ 154,36</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>120</td>
+                        <td>BAUTECH CURE</td>
+                        <td class="valor-unitario">R$ 1.508,20</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>9280</td>
+                        <td>BAUTECH Desmoldante OL</td>
+                        <td class="valor-unitario">R$ 59,65</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>931</td>
+                        <td>BAUTECH Desmoldante OL</td>
+                        <td class="valor-unitario">R$ 667,88</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>28</td>
+                        <td>BAUTECH DUR</td>
+                        <td class="valor-unitario">R$ 248,16</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>213</td>
+                        <td>BAUTECH DUR</td>
+                        <td class="valor-unitario">R$ 2.397,54</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>21113</td>
+                        <td>BAUTECH Efeito Cimento Queimado</td>
+                        <td class="valor-unitario">R$ 53,38</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>16727</td>
+                        <td>BAUTECH EMULSÃO ACQUA</td>
+                        <td class="valor-unitario">R$ 16,79</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>16726</td>
+                        <td>BAUTECH EMULSÃO ACQUA</td>
+                        <td class="valor-unitario">R$ 48,25</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>18195</td>
+                        <td>BAUTECH EMULSÃO ACQUA</td>
+                        <td class="valor-unitario">R$ 172,20</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>913</td>
+                        <td>BAUTECH Encunhamento Cinza</td>
+                        <td class="valor-unitario">R$ 29,68</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>17</td>
+                        <td>BAUTECH EP</td>
+                        <td class="valor-unitario">R$ 38,03</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>17688</td>
+                        <td>BAUTECH EP INJEÇÃO</td>
+                        <td class="valor-unitario">R$ 130,79</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>17719</td>
+                        <td>BAUTECH EP PL</td>
+                        <td class="valor-unitario">R$ 126,97</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>17721</td>
+                        <td>BAUTECH EP Sob-aquatico</td>
+                        <td class="valor-unitario">R$ 126,94</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>40</td>
+                        <td>BAUTECH EP TIX</td>
+                        <td class="valor-unitario">R$ 38,03</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>41</td>
+                        <td>BAUTECH EP ZN</td>
+                        <td class="valor-unitario">R$ 121,28</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>23353</td>
+                        <td>BAUTECH Fibra Trinca 46mx10,2cm</td>
+                        <td class="valor-unitario">R$ 46,99</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>22445</td>
+                        <td>BAUTECH Fita veda tudo 10cmx10m</td>
+                        <td class="valor-unitario">R$ 21,18</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>22446</td>
+                        <td>BAUTECH Fita veda tudo 20cmx10m</td>
+                        <td class="valor-unitario">R$ 42,35</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>22447</td>
+                        <td>BAUTECH Fita veda tudo 30cmx10m</td>
+                        <td class="valor-unitario">R$ 63,53</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>23213</td>
+                        <td>BAUTECH Fita veda tudo 45cmx10m</td>
+                        <td class="valor-unitario">R$ 95,28</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>23214</td>
+                        <td>BAUTECH Fita veda tudo 90cmx10m</td>
+                        <td class="valor-unitario">R$ 190,21</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>1046</td>
+                        <td>BAUTECH FIX C</td>
+                        <td class="valor-unitario">R$ 110,55</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>20884</td>
+                        <td>BAUTECH FIXA TUDO</td>
+                        <td class="valor-unitario">R$ 13,95</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>16531</td>
+                        <td>BAUTECH FLEX 68</td>
+                        <td class="valor-unitario">R$ 182,09</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>16530</td>
+                        <td>BAUTECH FLEX 68</td>
+                        <td class="valor-unitario">R$ 951,60</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>2176</td>
+                        <td>BAUTECH FUNDAÇÃO</td>
+                        <td class="valor-unitario">R$ 608,18</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>2177</td>
+                        <td>BAUTECH FUNDAÇÃO</td>
+                        <td class="valor-unitario">R$ 3.892,39</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>13694</td>
+                        <td>BAUTECH GELADO impermeab.telhado</td>
+                        <td class="valor-unitario">R$ 262,08</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>323</td>
+                        <td>BAUTECH GRAUTE</td>
+                        <td class="valor-unitario">R$ 22,51</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>5916</td>
+                        <td>BAUTECH GRUTE Cimento Sus Aquático</td>
+                        <td class="valor-unitario">R$ 204,33</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>687</td>
+                        <td>BAUTECH GRAUTE EP</td>
+                        <td class="valor-unitario">R$ 875,23</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>3</td>
+                        <td>BAUTECH GRAUTE EP Super fluido</td>
+                        <td class="valor-unitario">R$ 1.675,15</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>5761</td>
+                        <td>BAUTECH GRAUTE TIX</td>
+                        <td class="valor-unitario">R$ 25,32</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>9494</td>
+                        <td>BAUTECH IMPER PÓ</td>
+                        <td class="valor-unitario">R$ 56,95</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>21111</td>
+                        <td>BAUTECH Impermeab.de Tecido</td>
+                        <td class="valor-unitario">R$ 26,15</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>20451</td>
+                        <td>BAUTECH KIT Reparo Parede e Trincas</td>
+                        <td class="valor-unitario">R$ 73,56</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>6036</td>
+                        <td>BAUTECH Manta Liq., branca,cinza,conc.</td>
+                        <td class="valor-unitario">R$ 51,59</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>6037</td>
+                        <td>BAUTECH Manta LIq., brc. Cinza concreto</td>
+                        <td class="valor-unitario">R$ 131,58</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>13693</td>
+                        <td>BAUTECH MANTA LIQUIDA, branca</td>
+                        <td class="valor-unitario">R$ 161,49</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>22961</td>
+                        <td>BAUTECH Manta Liquida Incolor</td>
+                        <td class="valor-unitario">R$ 305,89</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>6050</td>
+                        <td>BAUTECH Manta liquida transparente</td>
+                        <td class="valor-unitario">R$ 359,50</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>23609</td>
+                        <td>BAUTECH MANTA L. TELHADOS E LAJES</td>
+                        <td class="valor-unitario">R$ 204,18</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>21788</td>
+                        <td>BAUTECH MANTA L. ANTIGOTEIRA</td>
+                        <td class="valor-unitario">R$ 217,74</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>18628</td>
+                        <td>BAUTECH MASSA ACRILICA</td>
+                        <td class="valor-unitario">R$ 44,25</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>15109</td>
+                        <td>BAUTECH MASSA ACRILICA</td>
+                        <td class="valor-unitario">R$ 131,18</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>23262</td>
+                        <td>BAUTECH Massa corrida Pó</td>
+                        <td class="valor-unitario">R$ 39,19</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>9947</td>
+                        <td>BAUTECH Massa corrida</td>
+                        <td class="valor-unitario">R$ 25,39</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>16663</td>
+                        <td>BAUTECH Massa corrida</td>
+                        <td class="valor-unitario">R$ 81,85</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>18906</td>
+                        <td>BAUTECH Memb. Impermeavel preta</td>
+                        <td class="valor-unitario">R$ 119,62</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>18907</td>
+                        <td>BAUTECH Memb. Impermeavel preta</td>
+                        <td class="valor-unitario">R$ 40,47</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>19350</td>
+                        <td>BAUTECH Mega Manta PU</td>
+                        <td class="valor-unitario">R$ 697,65</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>14604</td>
+                        <td>BAUTECH Mega Manta Poliureia 90 shore</td>
+                        <td class="valor-unitario">R$ 1.293,42</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>3347</td>
+                        <td>BAUTECH NIVELMIX NA 7 cinza</td>
+                        <td class="valor-unitario">R$ 162,33</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>21672</td>
+                        <td>BAUTECH NIVELMIX BASE</td>
+                        <td class="valor-unitario">R$ 57,30</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>20530</td>
+                        <td>BAUTECH Imperparede</td>
+                        <td class="valor-unitario">R$ 38,78</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>21752</td>
+                        <td>BAUTECH Imperparede</td>
+                        <td class="valor-unitario">R$ 135,37</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>18863</td>
+                        <td>BAUTECH Pigmento Pó 10x0,5gr</td>
+                        <td class="valor-unitario">R$ 12,41</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>18862</td>
+                        <td>BAUTECH Pigmento Pó 20x0,250gr20</td>
+                        <td class="valor-unitario">R$ 6,94</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>19095</td>
+                        <td>BAUTECH Pintura Asfaltica</td>
+                        <td class="valor-unitario">R$ 36,85</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>19653</td>
+                        <td>BAUTECH Pintura Asfaltica</td>
+                        <td class="valor-unitario">R$ 104,28</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>19161</td>
+                        <td>BAUTECH Pintura Asfaltica</td>
+                        <td class="valor-unitario">R$ 1.328,25</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>6048</td>
+                        <td>BAUTECH PISCINA MLASTIC</td>
+                        <td class="valor-unitario">R$ 338,06</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>18310</td>
+                        <td>BAUTECH PISO ACUSTICO</td>
+                        <td class="valor-unitario">R$ 181,84</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>17245</td>
+                        <td>BAUTEC PORCELANATO INTER, Argamassa</td>
+                        <td class="valor-unitario">R$ 25,16</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>63</td>
+                        <td>BAUTECH PLAST C</td>
+                        <td class="valor-unitario">R$ 520,89</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>81</td>
+                        <td>BAUTECH PLAST C</td>
+                        <td class="valor-unitario">R$ 22,58</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>9661</td>
+                        <td>BAUTECH PLAST C</td>
+                        <td class="valor-unitario">R$ 47,20</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>392</td>
+                        <td>BAUTECH PLAST C 1X6 L</td>
+                        <td class="valor-unitario">R$ 14,99</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>731</td>
+                        <td>BAUTECH PLASTIFICANTE 610</td>
+                        <td class="valor-unitario">R$ 311,39</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>654</td>
+                        <td>BAUTECH PLASTIFICANTE 610</td>
+                        <td class="valor-unitario">R$ 3.660,12</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>328</td>
+                        <td>BAUTECH Primer EP (branco, cinza)</td>
+                        <td class="valor-unitario">R$ 510,07</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>346</td>
+                        <td>BAUTECH Primer EPA</td>
+                        <td class="valor-unitario">R$ 510,07</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>204</td>
+                        <td>BAUTECH Primer P5</td>
+                        <td class="valor-unitario">R$ 329,01</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>16730</td>
+                        <td>BAUTECH PROTEGE</td>
+                        <td class="valor-unitario">R$ 165,07</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>20650</td>
+                        <td>BAUTECH Protege fundo armario</td>
+                        <td class="valor-unitario">R$ 31,00</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>20649</td>
+                        <td>BAUTECH Protege, Parede e Piso</td>
+                        <td class="valor-unitario">R$ 32,28</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>18481</td>
+                        <td>BAUTECH RAPCOLA</td>
+                        <td class="valor-unitario">R$ 195,06</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>13787</td>
+                        <td>BAUTECH RAPDEZ 5X5</td>
+                        <td class="valor-unitario">R$ 53,93</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>19918</td>
+                        <td>BAUTECH Rapfinish massa regularizadora</td>
+                        <td class="valor-unitario">R$ 127,97</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>17686</td>
+                        <td>BAUTECH RAPFINISH Cinza (8x3kg)</td>
+                        <td class="valor-unitario">R$ 61,61</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>20009</td>
+                        <td>BAUTECH RAPFLEX PVA</td>
+                        <td class="valor-unitario">R$ 203,93</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>17124</td>
+                        <td>BAUTECH RAPFLEX 10</td>
+                        <td class="valor-unitario">R$ 361,59</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>4888</td>
+                        <td>BAUTECH RAPFLEX 250</td>
+                        <td class="valor-unitario">R$ 705,19</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>4825</td>
+                        <td>BAUTECH RAPFLEX 500</td>
+                        <td class="valor-unitario">R$ 705,19</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>21097</td>
+                        <td>BAUTECH REBOSET (aditivo)</td>
+                        <td class="valor-unitario">R$ 181,15</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>426</td>
+                        <td>BAUTECH RAPFLEX PLUS (KIT)</td>
+                        <td class="valor-unitario">R$ 383,34</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>4776</td>
+                        <td>BAUTECH RAPGROUT</td>
+                        <td class="valor-unitario">R$ 247,48</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>21618</td>
+                        <td>BAUTECH Rejuntamento Epoxi, branco</td>
+                        <td class="valor-unitario">R$ 45,89</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>17347</td>
+                        <td>BAUTECH Rejunte 1kg</td>
+                        <td class="valor-unitario">R$ 13,56</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>18210</td>
+                        <td>BAUTECH Rejunte Piscina Plus, cinza,azul, verde</td>
+                        <td class="valor-unitario">R$ 145,80</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>13837</td>
+                        <td>BAUTECH RejunteFlex ciment. 5x5k</td>
+                        <td class="valor-unitario">R$ 94,96</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>16572</td>
+                        <td>BAUTECH Rejunte Acr. Líquido (9x0,470)</td>
+                        <td class="valor-unitario">R$ 15,06</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>79</td>
+                        <td>BAUTECH Anti Ataque</td>
+                        <td class="valor-unitario">R$ 82,82</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>65</td>
+                        <td>BAUTECH Rejunte Epoxi anti ataque</td>
+                        <td class="valor-unitario">R$ 100,75</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>5212</td>
+                        <td>BAUTECH RESINA ACR.Multiuso A.B</td>
+                        <td class="valor-unitario">R$ 67,34</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>10181</td>
+                        <td>BAUTECH RESINA ACR.Multiuso A.B</td>
+                        <td class="valor-unitario">R$ 187,17</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>5213</td>
+                        <td>BAUTECH RESINA ACR.Multiuso fosco</td>
+                        <td class="valor-unitario">R$ 46,22</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>10068</td>
+                        <td>BAUTECH RESINA ACR. Multiuso fosco</td>
+                        <td class="valor-unitario">R$ 154,40</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>20529</td>
+                        <td>BAUTECH,RESINA Protege pedra</td>
+                        <td class="valor-unitario">R$ 47,57</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>20526</td>
+                        <td>BAUTECH RESINA Protege Pisos</td>
+                        <td class="valor-unitario">R$ 47,57</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>20527</td>
+                        <td>BAUTECH RESINA Protege telhas (4 cores)</td>
+                        <td class="valor-unitario">R$ 47,57</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>20528</td>
+                        <td>BAUTECH RESINA Protege Tijolos</td>
+                        <td class="valor-unitario">R$ 47,57</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>9905</td>
+                        <td>BAUTECH RODAPÉ</td>
+                        <td class="valor-unitario">R$ 64,24</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>19815</td>
+                        <td>BAUTECH RODAPÉ</td>
+                        <td class="valor-unitario">R$ 111,48</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>5836</td>
+                        <td>BAUTECH RODAPÉ</td>
+                        <td class="valor-unitario">R$ 159,71</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>3350</td>
+                        <td>BAUTECH S 88</td>
+                        <td class="valor-unitario">R$ 88,12</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>13678</td>
+                        <td>BAUTECH SEC RÁPIDO</td>
+                        <td class="valor-unitario">R$ 488,92</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>15237</td>
+                        <td>BAUTECH SELADOR ACRÍLICO</td>
+                        <td class="valor-unitario">R$ 24,17</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>15428</td>
+                        <td>BAUTECH SELADOR ACRÍLICO</td>
+                        <td class="valor-unitario">R$ 74,29</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>19780</td>
+                        <td>BAUTECH SELADOR PARA GESSO</td>
+                        <td class="valor-unitario">R$ 91,29</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>21686</td>
+                        <td>BAUTECH Selan. PU40,Brc.bege,cinza,preto</td>
+                        <td class="valor-unitario">R$ 16,73</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>21682</td>
+                        <td>BAUTECH Acaba trinca selante acr.</td>
+                        <td class="valor-unitario">R$ 10,59</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>166</td>
+                        <td>BAUTECH ACABA TRINCA, 5kg</td>
+                        <td class="valor-unitario">R$ 30,17</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>20233</td>
+                        <td>BAUTECH SELANTE ACRILICO</td>
+                        <td class="valor-unitario">R$ 18,11</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>3456</td>
+                        <td>BAUTECH SELANTE ACRILICO</td>
+                        <td class="valor-unitario">R$ 69,75</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>235</td>
+                        <td>BAUTECH SELANTE PU 2/40</td>
+                        <td class="valor-unitario">R$ 635,45</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>96</td>
+                        <td>BAUTECH SELANTE PU 2/80</td>
+                        <td class="valor-unitario">R$ 635,45</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>21783</td>
+                        <td>BAUTECH Sel. Silicone veda e cola</td>
+                        <td class="valor-unitario">R$ 12,99</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>17515</td>
+                        <td>BAUTECH Sel. Silicone cartucho</td>
+                        <td class="valor-unitario">R$ 16,75</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>13717</td>
+                        <td>BAUTECH SKIN COAT externo</td>
+                        <td class="valor-unitario">R$ 58,20</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>15064</td>
+                        <td>BAUTECH SKIN COAT interno</td>
+                        <td class="valor-unitario">R$ 32,84</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>656</td>
+                        <td>BAUTECH STONES OLEOFUGANTE</td>
+                        <td class="valor-unitario">R$ 88,12</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>376</td>
+                        <td>BAUTECH STOP B2</td>
+                        <td class="valor-unitario">R$ 227,65</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>21425</td>
+                        <td>BAUTECH Selante vidro e aluminio</td>
+                        <td class="valor-unitario">R$ 17,83</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>21474</td>
+                        <td>MSET TELA IMP. 1.05mx50m</td>
+                        <td class="valor-unitario">R$ 316,96</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>22679</td>
+                        <td>BAUTECH Tela fibra vidro,5x5mm,1mx50m</td>
+                        <td class="valor-unitario">R$ 606,37</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>23355</td>
+                        <td>BAUTECH Tela Trinca parede, 45mx4,8cm</td>
+                        <td class="valor-unitario">R$ 14,86</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>19814</td>
+                        <td>BAUTECH TINTA GESSO Brc.</td>
+                        <td class="valor-unitario">R$ 130,10</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>18901</td>
+                        <td>BAUTECH TINTA super AC e COB. Brc..</td>
+                        <td class="valor-unitario">R$ 232,60</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>18902</td>
+                        <td>BAUTECH TINTA super AC e COB. Brc..</td>
+                        <td class="valor-unitario">R$ 50,77</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>20413</td>
+                        <td>BAUTECH Tinta Zero Bolor Brc. CONTRA FUNGO</td>
+                        <td class="valor-unitario">R$ 17,09</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>16042</td>
+                        <td>BAUTECH Tinta PREMIUM S. LAVAVEL</td>
+                        <td class="valor-unitario">R$ 72,96</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>16041</td>
+                        <td>BAUTECH Tinta PREMIUM S. LAVAVEL</td>
+                        <td class="valor-unitario">R$ 326,30</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>272</td>
+                        <td>BAUTECH COAT BRANCO( cinza,cód.327)</td>
+                        <td class="valor-unitario">R$ 76,45</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>23057</td>
+                        <td>BAUTECH TINTA EMBORRACHADA</td>
+                        <td class="valor-unitario">R$ 71,57</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>22755</td>
+                        <td>BAUTECH TINTA EMBORRACHADA</td>
+                        <td class="valor-unitario">R$ 240,89</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>23609</td>
+                        <td>BAUTECH TINTA TELHADO E LAJES</td>
+                        <td class="valor-unitario">R$ 204,18</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>20448</td>
+                        <td>BAUTECH TINTA PU PARA PISCINA</td>
+                        <td class="valor-unitario">R$ 341,55</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>23019</td>
+                        <td>BAUTECH Tinta Pintura litoral</td>
+                        <td class="valor-unitario">R$ 230,93</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>23062</td>
+                        <td>BAUTECH Tinta Pintura Litoral</td>
+                        <td class="valor-unitario">R$ 60,99</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>23426</td>
+                        <td>BAUTECH Tinta Borracha liquida</td>
+                        <td class="valor-unitario">R$ 478,80</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>23432</td>
+                        <td>BAUTECH Tinta Repinta Fachada</td>
+                        <td class="valor-unitario">R$ 295,95</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>17657</td>
+                        <td>BAUTECH TINTA ECONOMICA</td>
+                        <td class="valor-unitario">R$ 34,08</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>16658</td>
+                        <td>BAUTECH TINTA ECONOMICA</td>
+                        <td class="valor-unitario">R$ 116,35</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>21866</td>
+                        <td>BAUTECH TINTA ECONOMICA</td>
+                        <td class="valor-unitario">R$ 125,66</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>20412</td>
+                        <td>BAUTECH TINTA EMBORRACHADA rep.ext.</td>
+                        <td class="valor-unitario">R$ 22,98</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>19317</td>
+                        <td>BAUTECH EPOXI BRILH. (A+B)</td>
+                        <td class="valor-unitario">R$ 283,84</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>18916</td>
+                        <td>BAUTECH TINTA MINERAL</td>
+                        <td class="valor-unitario">R$ 174,33</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>22144</td>
+                        <td>
+                           BAUTECH esmalte fosco( amar.azul graf.plat.preto
+                           verm.)
+                        </td>
+                        <td class="valor-unitario">R$ 85,89</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>19992</td>
+                        <td>BAUTECH TINTA PISO</td>
+                        <td class="valor-unitario">R$ 56,65</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>18993</td>
+                        <td>BAUTECH TINTA PISO</td>
+                        <td class="valor-unitario">R$ 238,00</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>692</td>
+                        <td>BAUTECH Tinta PU (AMARELA, VERMELHA)</td>
+                        <td class="valor-unitario">R$ 410,00</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>502</td>
+                        <td>
+                           BAUTECH Tinta PU (CINZA, CINZA CLARO, PRETA, VERDE)
+                        </td>
+                        <td class="valor-unitario">R$ 398,00</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>502</td>
+                        <td>BAUTECH Tinta PU Azul ( PISCINA FIBRA VIDRO)</td>
+                        <td class="valor-unitario">R$ 398,00</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>502</td>
+                        <td>BAUTECH Tinta PU Branca ( PISCINA FIBRA VIDRO)</td>
+                        <td class="valor-unitario">R$ 398,00</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>20414</td>
+                        <td>BAUTECH Tinta Sobre Azulejo (CX COM 6)</td>
+                        <td class="valor-unitario">R$ 55,83</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>18902</td>
+                        <td>BAUTECH Tinta Super Acabamento e Cobertura</td>
+                        <td class="valor-unitario">R$ 50,77</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>18901</td>
+                        <td>BAUTECH Tinta Super Acabamento e Cobertura 300m</td>
+                        <td class="valor-unitario">R$ 232,60</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>6247</td>
+                        <td>BAUTECH Tinta Teto Banheiro</td>
+                        <td class="valor-unitario">R$ 73,85</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>13380</td>
+                        <td>BAUTECH Transparente Fosco</td>
+                        <td class="valor-unitario">R$ 359,50</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>21681</td>
+                        <td>BAUTECH Veda Calha (CX COM 12) CINZA</td>
+                        <td class="valor-unitario">R$ 8,24</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>16094</td>
+                        <td>BAUTECH VEDA FRISO 12 KG</td>
+                        <td class="valor-unitario">R$ 174,98</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>20655</td>
+                        <td>BAUTECH Verniz Anti Pichação (CX COM 6)</td>
+                        <td class="valor-unitario">R$ 71,88</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>20654</td>
+                        <td>BAUTECH Verniz PU MONO (CX COM 6)</td>
+                        <td class="valor-unitario">R$ 88,31</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
+                     <tr>
+                        <td>19694</td>
+                        <td>BAUTECH VERNIZ ANTIDERRAPANTE</td>
+                        <td class="valor-unitario">R$ 76,25</td>
+                        <td>
+                           <input
+                              type="number"
+                              class="qtd-pedido"
+                              value="0"
+                              min="1"
+                              max="999"
+                           />
+                        </td>
+                        <td class="valor-total">R$ -</td>
+                     </tr>
                   </tbody>
                   <tfoot>
                      <tr>
@@ -1507,6 +3135,8 @@
          </section>
          <button id="scrollTopButton" title="Ir para o topo">&#8679;</button>
       </section>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.70/pdfmake.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.70/vfs_fonts.js"></script>
       <script src="script.js"></script>
    </body>
 </html>
