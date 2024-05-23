@@ -270,9 +270,6 @@ document.addEventListener("DOMContentLoaded", function () {
          cep: "CEP",
          representante: "Representante",
          regiao: "Região",
-         transportadora: "Transportadora",
-         pagForm: "Forma de Pagamento",
-         // Adicione outros mapeamentos conforme necessário
       };
 
       // Função para obter o nome mapeado ou o original se não houver mapeamento
@@ -332,13 +329,9 @@ document.addEventListener("DOMContentLoaded", function () {
                ([key, value]) => `${getFieldDisplayName(key)}: ${value}`
             ),
             { text: "Dados da Transportadora", style: "subheader" },
-            ...Object.entries(transpData).map(
-               ([key, value]) => `${getFieldDisplayName(key)}: ${value}`
-            ),
+            ...Object.values(transpData),
             { text: "Forma de Pagamento", style: "subheader" },
-            ...Object.entries(pagData).map(
-               ([key, value]) => `${getFieldDisplayName(key)}: ${value}`
-            ),
+            ...Object.values(pagData),
             { text: "Produtos", style: "subheader" },
             {
                table: {
