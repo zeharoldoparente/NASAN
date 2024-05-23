@@ -189,7 +189,7 @@ document.addEventListener("DOMContentLoaded", function () {
    // Função para gerar o PDF
    function gerarPDF() {
       // Gerar número de pedido aleatório
-      const numeroPedido = Math.floor(Math.random() * 1000000);
+      const numeroPedido = Math.floor(Math.random() * 1000);
 
       // Obter data e horário da impressão
       const dataHoraImpressao = new Date().toLocaleString();
@@ -205,23 +205,39 @@ document.addEventListener("DOMContentLoaded", function () {
 
       // Coletar dados do formulário de cliente
       const clienteForm = document.getElementById("clienteForm");
-      const clienteData = Array.from(clienteForm.elements).reduce(
-         (acc, input) => {
-            if (input.name) acc[input.name] = input.value;
-            return acc;
-         },
-         {}
-      );
+      const clienteData = clienteForm
+         ? Array.from(clienteForm.elements).reduce((acc, input) => {
+              if (input.name) acc[input.name] = input.value;
+              return acc;
+           }, {})
+         : {};
 
       // Coletar dados do formulário de vendedor
       const vendedorForm = document.getElementById("vendedorForm");
-      const vendedorData = Array.from(vendedorForm.elements).reduce(
-         (acc, input) => {
-            if (input.name) acc[input.name] = input.value;
-            return acc;
-         },
-         {}
-      );
+      const vendedorData = vendedorForm
+         ? Array.from(vendedorForm.elements).reduce((acc, input) => {
+              if (input.name) acc[input.name] = input.value;
+              return acc;
+           }, {})
+         : {};
+
+      // Coletar dados do formulário de transportadora
+      const transpForm = document.getElementById("TranspForm");
+      const transpData = transpForm
+         ? Array.from(transpForm.elements).reduce((acc, input) => {
+              if (input.name) acc[input.name] = input.value;
+              return acc;
+           }, {})
+         : {};
+
+      // Coletar dados do formulário de forma de pagamento
+      const pagForm = document.getElementById("PagForm");
+      const pagData = pagForm
+         ? Array.from(pagForm.elements).reduce((acc, input) => {
+              if (input.name) acc[input.name] = input.value;
+              return acc;
+           }, {})
+         : {};
 
       // Coletar dados dos produtos
       const produtos = [];
@@ -243,32 +259,85 @@ document.addEventListener("DOMContentLoaded", function () {
       // Coletar observações
       const observacoes = document.getElementById("observacoes").value;
 
+      // Mapeamento dos nomes das chaves para nomes desejados
+      const fieldMapping = {
+         empresa: "Empresa",
+         cnpj: "CNPJ",
+         ie: "Inscrição Estadual",
+         loc: "Endereço",
+         estado: "Estado",
+         cidade: "Cidade",
+         cep: "CEP",
+         representante: "Representante",
+         regiao: "Região",
+         transportadora: "Transportadora",
+         pagForm: "Forma de Pagamento",
+         // Adicione outros mapeamentos conforme necessário
+      };
+
+      // Função para obter o nome mapeado ou o original se não houver mapeamento
+      const getFieldDisplayName = (fieldName) =>
+         fieldMapping[fieldName] || fieldName;
+
       // Definir a estrutura do PDF
       const docDefinition = {
          content: [
             {
+               text: "NASAM COMERCIO E BAUTECH",
+               style: "header",
+               margin: [0, 0, 0, 0],
+            },
+            {
+               text: "49.172.809/0001-90",
+               style: "subheader",
+               margin: [0, 0, 0, 0],
+            },
+            {
+               text: "RUA MARIANA 607 JD BEIRA LAGO - Araguaína-TO",
+               style: "subheader",
+               margin: [0, 0, 0, 0],
+            },
+            {
+               text: "77813-330",
+               style: "subheader",
+               margin: [0, 0, 0, 0],
+            },
+            {
+               text: "Tabela de Pedidos",
+               style: "header",
+               margin: [0, 0, 0, 30],
+            },
+            {
                text: `Número do Pedido: ${numeroPedido}`,
                style: "subheader",
                fontSize: 10,
-               margin: [0, 50, 0, 5],
-               alignment: "center",
+               margin: [0, 20, 0, 5],
+               alignment: "right",
             },
             {
                text: `Data e Hora do Pedido: ${dataHoraImpressao}`,
                style: "subheader",
                fontSize: 10,
                margin: [0, 0, 0, 5],
-               alignment: "center",
+               alignment: "right",
             },
             { text: "", margin: [0, 0, 0, 20] },
             { text: "Detalhes do Pedido", style: "header" },
             { text: "Dados do Cliente", style: "subheader" },
             ...Object.entries(clienteData).map(
-               ([key, value]) => `${key}: ${value}`
+               ([key, value]) => `${getFieldDisplayName(key)}: ${value}`
             ),
             { text: "Dados do Vendedor", style: "subheader" },
             ...Object.entries(vendedorData).map(
-               ([key, value]) => `${key}: ${value}`
+               ([key, value]) => `${getFieldDisplayName(key)}: ${value}`
+            ),
+            { text: "Dados da Transportadora", style: "subheader" },
+            ...Object.entries(transpData).map(
+               ([key, value]) => `${getFieldDisplayName(key)}: ${value}`
+            ),
+            { text: "Forma de Pagamento", style: "subheader" },
+            ...Object.entries(pagData).map(
+               ([key, value]) => `${getFieldDisplayName(key)}: ${value}`
             ),
             { text: "Produtos", style: "subheader" },
             {
@@ -312,7 +381,7 @@ document.addEventListener("DOMContentLoaded", function () {
             subheader: {
                fontSize: 14,
                bold: true,
-               margin: [0, 10, 0, 5],
+               margin: [0, 5, 0, 5],
             },
          },
       };
