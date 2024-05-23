@@ -188,6 +188,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
    // Função para gerar o PDF
    function gerarPDF() {
+      // Gerar número de pedido aleatório
+      const numeroPedido = Math.floor(Math.random() * 1000000);
+
+      // Obter data e horário da impressão
+      const dataHoraImpressao = new Date().toLocaleString();
+
       // Verificar se há produtos filtrados
       const produtosFiltrados = document.querySelectorAll(
          "tbody tr[style='display: table-row;']"
@@ -240,6 +246,21 @@ document.addEventListener("DOMContentLoaded", function () {
       // Definir a estrutura do PDF
       const docDefinition = {
          content: [
+            {
+               text: `Número do Pedido: ${numeroPedido}`,
+               style: "subheader",
+               fontSize: 10,
+               margin: [0, 50, 0, 5],
+               alignment: "center",
+            },
+            {
+               text: `Data e Hora do Pedido: ${dataHoraImpressao}`,
+               style: "subheader",
+               fontSize: 10,
+               margin: [0, 0, 0, 5],
+               alignment: "center",
+            },
+            { text: "", margin: [0, 0, 0, 20] },
             { text: "Detalhes do Pedido", style: "header" },
             { text: "Dados do Cliente", style: "subheader" },
             ...Object.entries(clienteData).map(
@@ -297,7 +318,8 @@ document.addEventListener("DOMContentLoaded", function () {
       };
 
       // Gerar o PDF
-      pdfMake.createPdf(docDefinition).download("pedido.pdf");
+      const nomeArquivoPDF = `Pedido Nº${numeroPedido} ${dataHoraImpressao}.pdf`;
+      pdfMake.createPdf(docDefinition).download(nomeArquivoPDF);
    }
 
    // Adicionar evento de escuta para o botão de geração de pedido
