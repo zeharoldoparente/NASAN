@@ -36,6 +36,47 @@ cepInput.addEventListener("input", function () {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
+   const produtos = [
+      { codigo: 17, nome: "Adesivo Ep - 01 Kg", valor: 33.08 },
+      { codigo: 60, nome: "Adesivo Ep Injecao - 01 Kg", valor: 136.08 },
+      { codigo: 73, nome: "Adesivo Ep Pl - 01 Kg", valor: 211.92 },
+      { codigo: 21, nome: "Adesivo Ep Sub Aquatico - 01 Kg", valor: 222.52 },
+      { codigo: 40, nome: "Adesivo Ep Tix - 01 Kg", valor: 36.23 },
+    ];
+    
+    const tabelaProdutos = document.querySelector('#produtosTabela tbody');
+    
+    produtos.forEach(produto => {
+      const tr = document.createElement('tr');
+      tr.innerHTML = `
+        <td>${produto.codigo}</td>
+        <td>${produto.nome}</td>
+        <td class="valor-unitario">${produto.valor.toFixed(2)}</td>
+        <td><input type="number" class="qtd-pedido" min="1" max="999" /></td>
+        <td class="valor-total">R$ 0,00</td>
+      `;
+      tabelaProdutos.appendChild(tr);
+    });
+    
+    // Função para calcular o valor total do pedido
+    function calcularTotalPedido() {
+      const total = Array.from(document.querySelectorAll('.qtd-pedido')).reduce((sum, input) => {
+        const qtd = parseFloat(input.value) || 0;
+        const valorUnitario = parseFloat(input.closest('tr').querySelector('.valor-unitario').textContent.replace('R$', '').replace(',', '.'));
+        const valorTotal = valorUnitario * qtd;
+        input.closest('tr').querySelector('.valor-total').textContent = `R$ ${valorTotal.toFixed(2)}`;
+        return sum + valorTotal;
+      }, 0);
+      document.querySelector('.total-pedido').textContent = `R$ ${total.toFixed(2)}`;
+    }
+    
+    document.querySelectorAll('.qtd-pedido').forEach(input => {
+      input.addEventListener('input', calcularTotalPedido);
+    });
+    
+
+
+
    // Função para mostrar ou ocultar o botão de rolagem suave com base na posição da página
    window.onscroll = function () {
       scrollFunction();
