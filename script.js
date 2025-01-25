@@ -141,6 +141,11 @@ document.addEventListener("DOMContentLoaded", function () {
          valor: 359.74,
       },
       {
+         codigo: "3347",
+         nome: "Argamassa Nivelmix An-7 Cinza - 20 Kg",
+         valor: 189.4,
+      },
+      {
          codigo: "21672",
          nome: "Argamassa Nivelmix Base - 20 Kg",
          valor: 70.49,
@@ -220,11 +225,6 @@ document.addEventListener("DOMContentLoaded", function () {
          codigo: "18960",
          nome: "Bautech Cola Ep Transparente - 20 G",
          valor: 8.05,
-      },
-      {
-         codigo: "19326",
-         nome: "Bautech Cola Instantânea - 20 G",
-         valor: 34.19,
       },
       { codigo: "18959", nome: "Bautech Cola Tudo - 100 G", valor: 10.55 },
       { codigo: "200", nome: "Bautech Cure - 20 L", valor: 183.79 },
@@ -325,18 +325,21 @@ document.addEventListener("DOMContentLoaded", function () {
          nome: "Bautech Impermeabilizante De Tecidos - 300 Ml",
          valor: 42.97,
       },
-      { codigo: "20530", nome: "Bautech Imperparede - 4 Kg", valor: 38.32 },
+      {
+         codigo: "20530",
+         nome: "Bautech Imperparede - 4 Kg",
+         valor: 38.32,
+      },
       {
          codigo: "21752",
          nome: "Bautech Imperparede Branco - 20 Kg",
          valor: 149.24,
       },
       {
-         codigo: "23337",
-         nome: "Bautech Imperpo Flex Ultra Areia - 20 Kg",
-         valor: 210.94,
+         codigo: "19721",
+         nome: "Bautech Imperpo Plus - 18 Kg",
+         valor: 128.4,
       },
-      { codigo: "19721", nome: "Bautech Imperpo Plus - 18 Kg", valor: 128.4 },
       { codigo: "13693", nome: "Bautech Manta Liquida - 15 Kg", valor: 208.89 },
       {
          codigo: "6036",
