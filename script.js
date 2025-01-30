@@ -366,14 +366,14 @@ document.addEventListener("DOMContentLoaded", function () {
          nome: "Bautech Manta Liquida Transparente - 3,5 Kg",
          valor: 334.18,
       },
-      { codigo: "21952", nome: "Bautech Massa Acrilica - 25 Kg", valor: 80.15 },
+      { codigo: "21952", nome: "Bautech Massa Acrilica - 25 Kg", valor: 88.16 },
       {
          codigo: "18628",
          nome: "Bautech Massa Acrilica - 5,8 Kg",
-         valor: 21.15,
+         valor: 23.26,
       },
-      { codigo: "16663", nome: "Bautech Massa Corrida - 25 Kg", valor: 53.89 },
-      { codigo: "9947", nome: "Bautech Massa Corrida - 5,8 Kg", valor: 14.23 },
+      { codigo: "16663", nome: "Bautech Massa Corrida - 25 Kg", valor: 59.28 },
+      { codigo: "9947", nome: "Bautech Massa Corrida - 5,8 Kg", valor: 15.66 },
       {
          codigo: "19918",
          nome: "Bautech Massa Regularizadora Rapfinish - 4 Kg",
