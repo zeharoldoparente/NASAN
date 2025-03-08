@@ -948,14 +948,14 @@ document.addEventListener("DOMContentLoaded", function () {
       // Obter data e horário da impressão
       const dataHoraImpressao = new Date().toLocaleString();
 
-      // Verificar se há produtos filtrados
-      const produtosFiltrados = document.querySelectorAll(
-         "tbody tr[style='display: table-row;']"
-      );
-      if (produtosFiltrados.length === 0) {
-         alert("Você precisa filtrar produtos antes de gerar o pedido.");
-         return;
-      }
+      // // Verificar se há produtos filtrados
+      // const produtosFiltrados = document.querySelectorAll(
+      //    "tbody tr[style='display: table-row;']"
+      // );
+      // if (produtosFiltrados.length === 0) {
+      //    alert("Você precisa filtrar produtos antes de gerar o pedido.");
+      //    return;
+      // }
 
       // Coletar dados do formulário de cliente
       const clienteForm = document.getElementById("clienteForm");
@@ -1086,18 +1086,30 @@ document.addEventListener("DOMContentLoaded", function () {
             ...Object.values(transpData),
             { text: "Forma de Pagamento", style: "subheader" },
             ...Object.values(pagData),
-            { text: "Produtos", style: "subheader" },
+            { text: "Produtos", style: "subheader", margin: [0, 20, 0, 10] },
             {
                table: {
                   headerRows: 1,
                   widths: ["auto", "*", "auto", "auto", "auto"],
                   body: [
                      [
-                        "Código",
-                        "Nome",
-                        "Valor Unitário",
-                        "Quantidade",
-                        "Valor Total",
+                        { text: "Código", style: "tableHeader" },
+                        { text: "Nome", style: "tableHeader" },
+                        {
+                           text: "Valor Unitário",
+                           style: "tableHeader",
+                           alignment: "right",
+                        },
+                        {
+                           text: "Quantidade",
+                           style: "tableHeader",
+                           alignment: "right",
+                        },
+                        {
+                           text: "Valor Total",
+                           style: "tableHeader",
+                           alignment: "right",
+                        },
                      ],
                      ...produtos,
                      [
@@ -1111,12 +1123,14 @@ document.addEventListener("DOMContentLoaded", function () {
                               .replace(".", ",")}`,
                            bold: true,
                            fillColor: "#FFFF00",
+                           alignment: "right",
                         },
                      ],
                   ],
                },
+               layout: "lightHorizontalLines",
             },
-            { text: "Observações", style: "subheader" },
+            { text: "Observações", style: "subheader", margin: [0, 20, 0, 5] },
             observacoes,
          ],
          styles: {
@@ -1130,6 +1144,13 @@ document.addEventListener("DOMContentLoaded", function () {
                bold: true,
                margin: [0, 5, 0, 5],
             },
+            tableHeader: {
+               bold: true,
+               fontSize: 12,
+               fillColor: "#f2f2f2",
+               alignment: "center",
+               padding: 5,
+            },
          },
       };
 
@@ -1140,7 +1161,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
    // Adicionar evento de escuta para o botão de geração de pedido
    const btnGerarPedido = document.getElementById("btnGerarPedido");
-   btnGerarPedido.addEventListener("click", gerarPDF);
+   btnGerarPedido.addEventListener("click", function () {
+      // Verificar se há produtos filtrados (visíveis)
+      const produtosFiltrados = document.querySelectorAll(
+         "tbody tr[style='display: table-row;']"
+      );
+      if (produtosFiltrados.length === 0) {
+         alert("Você precisa filtrar produtos antes de gerar o pedido.");
+         return; // Impede a execução da geração do pedido
+      }
+
+      gerarPDF(); // Se houver produtos filtrados, chama a função para gerar o PDF
+   });
 
    // Função para filtrar os produtos por código ou nome
    function searchProdutos() {
