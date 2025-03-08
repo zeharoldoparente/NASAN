@@ -170,6 +170,11 @@ document.addEventListener("DOMContentLoaded", function () {
          valor: 848.51,
       },
       {
+         codigo: "18376",
+         nome: "Bautech Bloqueio De Umidade 200 L",
+         valor: 6009.48,
+      },
+      {
          codigo: "23426",
          nome: "Bautech Borracha Liquida Branca 20 Kg",
          valor: 312.35,
@@ -199,6 +204,12 @@ document.addEventListener("DOMContentLoaded", function () {
       },
       { codigo: "9280", nome: "Bautech Desmoldante Ol - 12 L", valor: 57.18 },
       { codigo: "931", nome: "Bautech Desmoldante Ol - 200 L", valor: 692.77 },
+      { codigo: "29678", nome: "Bautech Desmoldante UY - 12 L", valor: 80.52 },
+      {
+         codigo: "23351",
+         nome: "Bautech Desmoldante UY - 200 L",
+         valor: 1073.5,
+      },
       { codigo: "28", nome: "Bautech Dur - 20 L", valor: 131.96 },
       { codigo: "213", nome: "Bautech Dur - 200 L", valor: 1087.52 },
       {
@@ -422,9 +433,10 @@ document.addEventListener("DOMContentLoaded", function () {
          valor: 2827.41,
       },
       { codigo: "18957", nome: "Bautech Prego Liquido - 50 G", valor: 4.75 },
-      { codigo: "328", nome: "Bautech Primer Ep Branco - 4 Kg", valor: 750.47 },
-      { codigo: "34", nome: "Bautech Primer Ep Cinza - 4 Kg", valor: 701.37 },
-      { codigo: "204", nome: "Bautech Primer P5 - 5 Kg", valor: 321.33 },
+      { codigo: "328", nome: "Bautech Primer Ep Branco - 4 Kg", valor: 283.96 },
+      { codigo: "34", nome: "Bautech Primer Ep Cinza - 4 Kg", valor: 283.96 },
+      { codigo: "204", nome: "Bautech Primer P5 - 5 Kg", valor: 334.65 },
+      { codigo: "346", nome: "Bautech Primer EPA - 4 Kg", valor: 283.96 },
       { codigo: "21686", nome: "Bautech Pu40 Branco - 310 G", valor: 12.68 },
       { codigo: "29451", nome: "Bautech Pu40 Branco - 4 Kg", valor: 136.87 },
       { codigo: "20009", nome: "Bautech Rapflex Pav - 20 Kg", valor: 211.03 },
@@ -556,16 +568,16 @@ document.addEventListener("DOMContentLoaded", function () {
       {
          codigo: "19317",
          nome: "Bautech Tinta Epoxi Branco - 3,6 L",
-         valor: 252.65,
+         valor: 283.96,
       },
       {
-         codigo: "22144",
-         nome: "Bautech Tinta Esmalte Emulsionado - 3,6 L",
+         codigo: "18460",
+         nome: "Bautech Tinta Esmalte Sintética Branca - 3,6 L",
          valor: 97.11,
       },
       {
-         codigo: "22145",
-         nome: "Bautech Tinta Esmalte Emulsionado - 0,9 L",
+         codigo: "18476",
+         nome: "Bautech Tinta Esmalte Sintética Branca - 0,9 L",
          valor: 25.71,
       },
       {
@@ -607,6 +619,11 @@ document.addEventListener("DOMContentLoaded", function () {
          codigo: "20448",
          nome: "Bautech Tinta Pu Para Piscina - 4 Kg",
          valor: 256.39,
+      },
+      {
+         codigo: "503",
+         nome: "Bautech Tinta Pu Cinza - 4 Kg",
+         valor: 283.96,
       },
       {
          codigo: "20414",
