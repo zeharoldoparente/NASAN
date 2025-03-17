@@ -238,6 +238,31 @@ document.addEventListener("DOMContentLoaded", function () {
          valor: 58.04,
       },
       {
+         codigo: "30265",
+         nome: "Bautech Fita Crepe 18mmX50m",
+         valor: 3.79,
+      },
+      {
+         codigo: "30266",
+         nome: "Bautech Fita Crepe 24mmX50m",
+         valor: 5.76,
+      },
+      {
+         codigo: "30267",
+         nome: "Bautech Fita Crepe 48mmX50m",
+         valor: 10.56,
+      },
+      {
+         codigo: "30268",
+         nome: "Bautech Fita Crepe Azul 24mmX50m",
+         valor: 10.46,
+      },
+      {
+         codigo: "30269",
+         nome: "Bautech Fita Crepe Azul 48mmX50m",
+         valor: 22.15,
+      },
+      {
          codigo: "23353",
          nome: "Bautech Fita Trinca - 46 M X 10,2 Cm",
          valor: 52.88,
