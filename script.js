@@ -651,12 +651,12 @@ document.addEventListener("DOMContentLoaded", function () {
       {
          codigo: "18460",
          nome: "Bautech Tinta Esmalte Sintética Branca - 3,6 L",
-         valor: 97.11,
+         valor: 81.33,
       },
       {
          codigo: "18476",
          nome: "Bautech Tinta Esmalte Sintética Branca - 0,9 L",
-         valor: 25.71,
+         valor: 30.63,
       },
       {
          codigo: "19814",
